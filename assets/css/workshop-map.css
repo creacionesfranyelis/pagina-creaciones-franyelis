@@ -1,0 +1,23 @@
+.workshop-map{background:var(--cream)}
+.workshop-map-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:32px;align-items:center}
+.workshop-map .sub{font-size:16px;margin-bottom:24px}
+.workshop-map-facts{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:14px;color:var(--brown)}
+.workshop-map-facts li{display:flex;gap:12px;align-items:flex-start}
+.workshop-map-facts svg{margin-top:2px;color:var(--pink)}
+.workshop-map .btn{font-size:15px;text-align:center;min-height:48px}
+.workshop-map-stage{position:relative;min-height:340px;border:1px solid #efdcd6;border-radius:26px;overflow:hidden;background:linear-gradient(135deg,#fff0f5,#fffaf5);box-shadow:0 10px 30px rgba(77,31,20,.06)}
+.workshop-map-placeholder{min-height:340px;padding:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--brown)}
+.workshop-map-placeholder>.ui-icon{width:40px;height:40px;color:var(--pink);margin-bottom:12px}
+.workshop-map-placeholder strong{font-family:Georgia,serif;font-size:25px}
+.workshop-map-placeholder p{font-size:14px;color:var(--muted);max-width:410px;margin:12px 0 18px}
+.workshop-map-load{border:1px solid #d61b68;border-radius:999px;background:#fff;color:var(--pink);font-weight:700;padding:12px 20px;min-height:46px}
+.workshop-map-stage iframe{display:block;width:100%;height:340px;border:0}
+.workshop-map-controls{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:12px;font-size:12px;color:var(--muted)}
+.workshop-map-controls button{background:transparent;border:0;color:var(--brown);text-decoration:underline;text-underline-offset:4px;min-height:44px;padding:8px 0}
+.workshop-map-controls p{margin:0}
+.footer-legal{display:flex;align-items:center;flex-wrap:wrap;gap:6px 20px;margin-top:20px;font-size:13px;color:#eadbd5}
+.footer-legal a,.footer-legal button{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}
+.footer-legal button{padding:0;border:0;background:transparent;color:inherit;font:inherit}
+@media(max-width:900px){.workshop-map-grid{grid-template-columns:1fr;gap:24px}}
+@media(max-width:600px){body.workshop-map-in-view :is(.floating-whatsapp,.reading-top){visibility:hidden!important;pointer-events:none!important}}
+@media(max-width:600px){.workshop-map-stage,.workshop-map-placeholder{min-height:280px}.workshop-map-stage iframe{height:280px}.workshop-map-placeholder{padding:24px}.workshop-map-controls{flex-wrap:wrap}.workshop-map .btn{width:100%}.footer-legal{gap:4px 16px}}

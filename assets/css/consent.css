@@ -1,0 +1,45 @@
+.consent-ui { color: #2a1713; font: 15px/1.5 Arial, Helvetica, sans-serif; }
+.consent-ui [hidden] { display: none !important; }
+.consent-ui button, .consent-ui input { font: inherit; }
+.consent-ui button { cursor: pointer; }
+.consent-ui a { color: #9d154d; text-decoration: underline; text-underline-offset: 3px; }
+.consent-ui :is(button, input, a):focus-visible { outline: 3px solid #4b1d14; outline-offset: 4px; }
+.consent-banner { position: fixed; z-index: 150; bottom: max(12px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); width: min(1100px, calc(100% - 24px)); padding: 22px 54px 22px 24px; background: #fffaf5; border: 1px solid #edc8d6; border-radius: 20px; box-shadow: 0 12px 44px rgba(75, 29, 20, .22); display: flex; align-items: center; gap: 24px; max-height: calc(100dvh - 24px); overflow-y: auto; }
+.consent-banner-copy { flex: 1; min-width: 0; }
+.consent-ui h2 { color: #4b1d14; font-family: Georgia, serif; font-size: 24px; line-height: 1.15; margin: 0 0 10px; letter-spacing: -.3px; }
+.consent-banner p { margin: 0; max-width: 640px; }
+.consent-actions { display: grid; gap: 8px; flex: 0 0 230px; }
+.consent-actions button, .consent-save { min-height: 44px; padding: 10px 16px; border: 1px solid #a71952; border-radius: 12px; background: #fff; color: #9d154d; font-weight: 700; text-align: center; transition: background-color .15s ease; }
+.consent-actions button:hover, .consent-save:hover { background: #fff0f5; }
+.consent-dismiss { position: absolute; top: 5px; right: 5px; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: #4b1d14; font-size: 26px !important; line-height: 1; }
+.consent-dismiss:hover { background: #fff0f5; }
+.consent-dialog { position: fixed; inset: 0; width: min(620px, calc(100% - 24px)); max-height: calc(100dvh - max(24px, env(safe-area-inset-bottom))); margin: auto; padding: 30px 26px; overflow-y: auto; overscroll-behavior: contain; border: 1px solid #edc8d6; border-radius: 24px; color: #2a1713; background: #fffaf5; box-shadow: 0 20px 60px rgba(75, 29, 20, .24); }
+.consent-dialog::backdrop { background: rgba(42, 23, 19, .55); }
+.consent-dialog > p { margin: 0 0 20px; }
+.consent-dialog h2 { padding-right: 30px; font-size: 30px; }
+.consent-form { display: grid; gap: 12px; }
+.consent-choice { display: flex; align-items: center; gap: 18px; padding: 16px; background: #fff; border: 1px solid #eedbd4; border-radius: 16px; }
+.consent-choice > div { flex: 1; min-width: 0; }
+.consent-choice strong { color: #4b1d14; }
+.consent-choice p { margin: 5px 0 0; font-size: 14px; color: #5d433c; }
+.consent-choice input { width: 24px; height: 24px; margin: 0; flex-shrink: 0; accent-color: #d61b68; cursor: pointer; }
+.consent-choice--necessary span { color: #5d433c; font-size: 12px; font-weight: 700; flex: 0 0 62px; text-align: center; }
+.consent-policy-links { margin: 6px 0; font-size: 14px; }
+.consent-save { width: 100%; background: #fff0f5; }
+.consent-actions--dialog { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.consent-notice:empty { display: none; }
+.consent-notice:not(:empty) { position: fixed; z-index: 160; bottom: max(12px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); width: min(680px, calc(100% - 24px)); padding: 14px 18px; margin: 0; color: #4b1d14; background: #fffaf5; border: 1px solid #edc8d6; border-radius: 16px; box-shadow: 0 8px 24px rgba(75, 29, 20, .15); }
+body.consent-banner-open :is(.floating-whatsapp, .reading-top) { visibility: hidden !important; pointer-events: none !important; }
+@media (max-width: 760px) {
+  .consent-banner { flex-direction: column; align-items: stretch; gap: 14px; padding: 18px; }
+  .consent-banner-copy { padding-right: 25px; }
+  .consent-banner h2 { font-size: 22px; }
+  .consent-banner p { font-size: 14px; }
+  .consent-actions { flex-basis: auto; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .consent-actions > button:last-child:nth-child(3) { grid-column: 1 / -1; }
+  .consent-dialog { padding: 28px 18px 20px; }
+  .consent-choice { gap: 12px; padding: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .consent-ui *, .consent-ui *::before, .consent-ui *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
