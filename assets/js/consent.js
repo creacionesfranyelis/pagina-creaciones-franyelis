@@ -78,7 +78,8 @@
       window.fbq('track', 'PageView');
       sentPageEvents.add('PageView');
       window.fbq('track', 'ViewContent', {
-        content_name: 'El Rey de la Navidad', content_category: 'Curso Navideño', value: 95000, currency: 'CLP'
+        content_name: 'El Rey de la Navidad', content_category: 'Curso Navideño',
+        ...(window.FranyelisEarlyBooking?.isActive() ? { value: 95000, currency: 'CLP' } : {})
       });
       sentPageEvents.add('ViewContent');
       const script = document.createElement('script');

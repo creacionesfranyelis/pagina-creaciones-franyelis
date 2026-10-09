@@ -29,3 +29,11 @@ Conservar la URL canónica https://www.creacionesfranyelis.com/, el programa y l
 Comprobar coherencia entre página, FAQ, WhatsApp, condiciones, imagen social y datos estructurados; navegación, consentimiento, compartir el enlace limpio, recursos y vista móvil/escritorio. Revisar el cambio de Git, ejecutar git diff --check y probar el Preview. Publicar únicamente tras la autorización correspondiente y confirmar la versión pública después. Registrar el commit, el momento de publicación y la persona responsable, sin guardar datos de participantes ni comprobantes en el repositorio.
 
 Pendientes antes de ejecutar: asignar responsable, aprobar el arte social y el texto comercial posterior a la promoción, confirmar el procedimiento de cierre de inscripciones y autorizar las publicaciones. Este plan está preparado; no se ha ejecutado ninguna actualización futura ni creado una automatización.
+
+OFERTA ANTICIPADA Y EBOOK (PREPARACIÓN LOCAL)
+
+assets/js/early-booking.js usa ENABLED=true y fecha límite 2026-10-19T00:00:00-03:00. Para desactivar manualmente promoción y regalo, cambiar ENABLED a false y revisar antes de publicar. La landing muestra consulta de disponibilidad si no se comprueba la vigencia; no cambia automáticamente precios ni saldos. Revisar la hora local del visitante no sustituye la verificación del abono ni la confirmación de la empresa.
+
+El ebook DE TU COCINA A TU NEGOCIO corresponde a reservas confirmadas con abono de $30.000 CLP hasta el 18 de octubre inclusive. Mantener ese beneficio para participantes elegibles, aunque después se retire el anuncio. Entrega manual y privada en PDF por canal acordado una vez disponible; sin descarga pública, fecha de entrega ni pago total como requisito. No sustituye Dulce de Lechoza.
+
+Portada: integrada la imagen oficial aportada por el propietario, con título y subtítulo confirmados. Se sirve mediante assets/images/ebook-de-tu-cocina-a-tu-negocio-480.webp y assets/images/ebook-de-tu-cocina-a-tu-negocio-720.webp, optimizadas sin recortar el arte. La presentación de libro usa CSS y no habilita una descarga pública del PDF. El precio impreso de la imagen OG existente requiere el reemplazo manual y aprobado ya descrito arriba; la caducidad del HTML no cambia el arte social.

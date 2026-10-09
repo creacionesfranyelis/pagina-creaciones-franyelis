@@ -139,7 +139,7 @@
     // details and arbitrary caller parameters are never forwarded to Google.
     let source = 'other';
     try {
-      if (['hero', 'offer', 'final', 'floating', 'faq', 'footer', 'consult', 'workshop-map'].includes(parameters.source)) source = parameters.source;
+      if (['hero', 'offer', 'ebook', 'final', 'floating', 'faq', 'footer', 'consult', 'workshop-map'].includes(parameters.source)) source = parameters.source;
     } catch (_) { /* Use a neutral source for malformed input. */ }
     actions.add(action);
     let sent = sendAnalytics(name, { source });
