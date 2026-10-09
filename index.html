@@ -100,6 +100,22 @@ h1 em{font-style:normal;color:var(--pink)}
 .num{width:54px;height:54px;border-radius:16px;background:var(--brown);color:#fff;display:grid;place-items:center;font-weight:900}
 .module h3{margin:0 0 5px;color:var(--brown);font-size:21px}
 .module p{margin:0;color:var(--muted)}
+.program{margin-top:48px;padding-top:36px;border-top:1px solid #efd4de}
+.program h3{font-family:Georgia,serif;font-size:32px;line-height:1.12;color:var(--brown);margin:0 0 14px;max-width:820px;letter-spacing:-.5px}
+.program h3 span{display:block;font-family:Arial,sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--pink);margin-bottom:12px}
+.program-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.program details{padding:0;overflow:clip;border-radius:22px;transition:border-color .2s,box-shadow .2s}
+.program summary{list-style:none;position:relative;display:flex;gap:14px;padding:22px 56px 22px 22px;font-weight:400;min-height:140px}
+.program-number{flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;background:#ffe2ed;color:var(--pink);border-radius:13px;font-size:14px;font-weight:800}
+.program-summary strong{display:block;font-size:19px;line-height:1.25;color:var(--brown);margin-bottom:7px}
+.program-summary>span{display:block;font-size:14px;line-height:1.5;color:var(--muted)}
+.program summary::after{content:'+';position:absolute;right:18px;top:28px;width:25px;height:25px;display:grid;place-items:center;background:#fff0f5;color:var(--pink);border-radius:50%;font-size:22px;transition:transform .25s}
+.program details[open] summary::after{transform:rotate(45deg)}
+.program details[open]{border-color:#e6bacb;box-shadow:0 10px 28px rgba(70,33,23,.05)}
+.program details:focus-within{outline:3px solid var(--brown);outline-offset:4px}
+.program-content{padding:0 22px 22px;color:var(--muted);font-size:15px}
+.program-content ul{margin:0;padding:17px 0 0 20px;border-top:1px solid #f2e5e0}
+.program-content li+li{margin-top:8px}
 .bonus{position:relative;overflow:hidden;background:linear-gradient(135deg,#5a1d16,#8c3023);color:#fff;border-radius:34px;padding:42px;display:grid;grid-template-columns:1fr .55fr;gap:30px;align-items:center;box-shadow:var(--shadow)}
 .bonus:after{content:"BONO";position:absolute;right:-20px;top:-36px;font-size:140px;font-weight:1000;color:rgba(255,255,255,.05);transform:rotate(9deg)}
 .bonus h2{color:#fff;margin-bottom:10px}
@@ -158,7 +174,9 @@ html{scroll-padding-top:24px}
 .hero-heading{grid-column:1;grid-row:1;position:relative;z-index:2}
 .hero-heading h1{font-size:clamp(48px,5.2vw,72px);line-height:1.02;margin:17px 0 16px;letter-spacing:-2px}
 .hero-heading h1 em{display:block}
-.hero-heading .lead{font-size:19px;margin:0;max-width:540px}
+.hero-heading .course-prefix{display:block;font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.3;font-weight:700;letter-spacing:.3px;margin-bottom:5px}
+.hero-benefit{font-family:Georgia,serif;font-size:23px;line-height:1.3;color:var(--brown);margin:0 0 10px;max-width:540px}
+.hero-heading .lead{font-size:17px;margin:0;max-width:540px}
 .hero-sale{grid-column:1;grid-row:2;position:relative;z-index:2}
 .hero-grid>.collage{grid-column:2;grid-row:1 / span 2;min-height:520px}
 .photo-main img{object-position:50% 72%}
@@ -219,7 +237,18 @@ html{scroll-padding-top:24px}
 .offer-normal{font-size:14px;color:var(--muted);margin:0 0 5px}
 .offer-normal del{margin-left:8px;font-size:19px}
 .offer-value{font-size:clamp(52px,6vw,70px);line-height:1.05;font-weight:800;color:var(--brown);margin:0;letter-spacing:-2px;font-variant-numeric:tabular-nums}
-.offer-card .promotion-note{margin:12px 0 24px}
+.offer-price-label{font-size:14px;color:var(--muted);margin:10px 0 5px}
+.price-currency{font-size:13px;letter-spacing:0;font-weight:700}
+.offer-saving{display:inline-block;margin:13px 0 0;padding:6px 12px;border-radius:999px;background:var(--rose);color:var(--pink);font-size:14px;font-weight:700}
+.offer-card .promotion-note{margin:10px 0 20px}
+.reserve-note{font-size:13px;line-height:1.5;color:var(--muted);margin:12px 0 0}
+.instructor-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:center}
+.instructor-photo{margin:0;width:100%;max-width:440px;overflow:hidden;border-radius:28px;background:#fff;border:1px solid #efdcd6;box-shadow:var(--shadow)}
+.instructor-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.instructor-copy .sub{margin-bottom:0;max-width:550px}
+.practical-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.practical-grid dt{font-weight:700;color:var(--brown)}
+.practical-grid dd{margin:6px 0 0;color:var(--muted)}
 .reserve-box{display:flex;align-items:center;justify-content:space-between;gap:18px;background:#fff0f5;border:1px solid #f4d3df;border-radius:18px;padding:16px 18px;color:var(--brown);font-size:14px}
 .reserve-box strong{font-size:28px;white-space:nowrap}
 .offer-bonus{display:flex;align-items:center;gap:9px;margin:18px 0;color:var(--brown);font-size:14px}
@@ -240,8 +269,8 @@ summary::-webkit-details-marker{display:none}
 .faq-answer a{text-decoration:underline;text-underline-offset:3px;color:var(--brown)}
 @supports (interpolate-size:allow-keywords){
  :root{interpolate-size:allow-keywords}
- .faq details::details-content{block-size:0;overflow:clip;transition:block-size .3s ease,content-visibility .3s ease;transition-behavior:allow-discrete}
- .faq details[open]::details-content{block-size:auto}
+ .faq details::details-content,.program details::details-content{block-size:0;overflow:clip;transition:block-size .3s ease,content-visibility .3s ease;transition-behavior:allow-discrete}
+ .faq details[open]::details-content,.program details[open]::details-content{block-size:auto}
 }
 .final{padding:64px 0}
 .final h2{font-family:Georgia,serif;font-size:clamp(34px,4.5vw,52px);line-height:1.08;letter-spacing:-1px}
@@ -286,11 +315,14 @@ body.has-floating-whatsapp{padding-bottom:calc(88px + env(safe-area-inset-bottom
 }
 @media(min-width:601px){.floating-whatsapp{display:none!important}body.has-floating-whatsapp{padding-bottom:0}.share-toast,.share-fallback{bottom:24px}}
 @media(max-width:900px){
+ .hero{padding-top:32px}
  .hero-grid{grid-template-columns:1fr;gap:24px}
  .hero-heading,.hero-sale,.hero-grid>.collage{grid-column:1;grid-row:auto}
- .hero-heading{order:1}.hero-grid>.collage{order:2;min-height:390px;width:min(640px,100%);margin:auto}.hero-sale{order:3}
+ .hero-heading{order:1}.hero-grid>.collage{order:2;min-height:340px;width:min(640px,100%);margin:auto}.hero-sale{order:3}
  .hero-heading h1 em{display:inline}
- .curriculum,.experience-intro,.offer-panel{grid-template-columns:1fr}
+ .curriculum,.experience-intro,.offer-panel,.instructor-grid{grid-template-columns:1fr}
+ .instructor-photo{margin:auto}.instructor-copy{max-width:700px;margin:auto}
+ .practical-grid{grid-template-columns:repeat(2,1fr)}
  .cards3{gap:14px}.card{padding:22px}
  .trust-grid{grid-template-columns:1fr 1fr}
  .trust-item:nth-child(3){border-left:0;border-top:1px solid #f1ddd7}
@@ -307,10 +339,12 @@ body.has-floating-whatsapp{padding-bottom:calc(88px + env(safe-area-inset-bottom
  .topbar{font-size:12px;line-height:1.4;padding:8px 10px}.topbar-extra{display:none}
  .navin{height:68px;gap:10px}.brand{gap:8px}.brand img{width:44px;height:44px}.brand b{font-size:15px}.brand small{font-size:11px}
  .nav .share-course{padding:10px;min-width:44px}.nav .share-label{display:none}
- .hero{padding:22px 0 30px}.hero-grid{gap:17px}.kicker{font-size:11px;padding:7px 11px}
- .hero-heading h1{font-size:46px;line-height:1.01;letter-spacing:-1.5px;margin:12px 0 10px}
+ .hero{padding:18px 0 26px}.hero-grid{gap:13px}.kicker{font-size:11px;padding:7px 11px}
+ .hero-heading h1{font-size:44px;line-height:1.01;letter-spacing:-1.5px;margin:8px 0 9px}
  .hero-heading h1 em{display:block}
- .hero-heading .lead{font-size:15px;line-height:1.45}
+ .hero-heading .course-prefix{font-size:13px;margin-bottom:3px}
+ .hero-benefit{font-size:17px;line-height:1.3;margin-bottom:7px}
+ .hero-heading .lead{font-size:14px;line-height:1.4}
  .hero-grid>.collage{min-height:218px;width:100%}
  .photo-main{inset:0 70px 0 0;border-width:5px;border-radius:24px}
  .photo-small{width:31%;aspect-ratio:1/1;border-width:4px;border-radius:17px}
@@ -327,6 +361,9 @@ body.has-floating-whatsapp{padding-bottom:calc(88px + env(safe-area-inset-bottom
  .trust-item{font-size:12px;padding:15px 8px}
  .curriculum{gap:24px}.course-photo{max-height:300px;border-radius:24px}.course-photo img{aspect-ratio:1.3;object-position:50% 65%}
  .module{grid-template-columns:42px 1fr;gap:12px;padding:16px;border-radius:18px}.num{width:42px;height:42px;border-radius:12px}.module h3{font-size:19px}.module p{font-size:14px}
+ .program{margin-top:32px;padding-top:28px}.program h3{font-size:27px}.program-grid{grid-template-columns:1fr;gap:12px}
+ .program summary{padding:20px 48px 20px 17px;gap:12px;min-height:126px}.program-summary strong{font-size:18px}.program summary::after{right:14px;top:24px}.program-content{padding:0 18px 20px;font-size:14px}
+ .instructor-grid{gap:25px}.instructor-photo{max-width:360px;border-radius:24px}.practical-grid{grid-template-columns:1fr}
  .bonus{grid-template-columns:1fr;padding:26px;border-radius:26px;gap:20px}.bonus h2{font-size:31px}.bonus p{font-size:16px}.bonus-badge{font-size:19px;padding:13px;max-width:100%}.bonus-badge br{display:none}.bonus-badge small{display:block;font-size:11px;margin-top:4px}
  .process-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.process-photo{border-radius:17px}.process-photo img{aspect-ratio:1/1.08}.process-photo figcaption{font-size:12px;padding:11px}
  .gallery-grid{gap:14px}.gallery-photo{border-radius:20px}.gallery-photo img{aspect-ratio:1/1.25}.gallery-photo figcaption{padding:12px;font-size:12px}
@@ -359,6 +396,7 @@ body.has-floating-whatsapp{padding-bottom:calc(88px + env(safe-area-inset-bottom
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .faq details::details-content,.program details::details-content{transition:none!important}
  .js-animations [data-reveal]{opacity:1!important;transform:none!important}
 }
 
@@ -406,27 +444,36 @@ try {
 </div></nav>
 <main id="main" tabindex="-1">
 <header class="hero" aria-labelledby="course-title"><div class="wrap hero-grid">
-<div class="hero-heading"><div class="kicker">✨ Curso práctico · Presencial</div><h1 id="course-title">El Rey de <em>la Navidad</em></h1><p class="lead"><strong>Pan de Jamón · Tortas navideñas · Ponche Crema</strong><br>Aprende a preparar los sabores que hacen especial la Navidad.</p></div>
+<div class="hero-heading"><div class="kicker">✨ Curso práctico · Presencial</div><h1 id="course-title"><span class="course-prefix">Curso</span> El Rey de <em>la Navidad</em></h1><p class="hero-benefit">Esta Navidad, sorprende a tu familia con delicias hechas por ti.</p><p class="lead">Aprende paso a paso <strong>Pan de Jamón, Tortas Navideñas y Ponche Crema.</strong></p></div>
 <div class="collage" data-parallax aria-label="Productos reales de Creaciones Franyelis">
 <div class="photo-main"><img src="assets/images/pan-de-jamon-artesanal-480.webp" srcset="assets/images/pan-de-jamon-artesanal-480.webp 480w, assets/images/pan-de-jamon-artesanal-900.webp 900w" sizes="(max-width: 600px) 72vw, (max-width: 900px) 70vw, 480px" width="900" height="1200" alt="Panes de jamón artesanales dorados, con el relleno visible" fetchpriority="high" loading="eager" decoding="async" ></div>
 <div class="photo-small one"><img src="assets/images/pan-de-jamon-rebanadas-480.webp" srcset="assets/images/pan-de-jamon-rebanadas-480.webp 480w, assets/images/pan-de-jamon-rebanadas-900.webp 900w" sizes="(max-width: 600px) 30vw, 240px" width="900" height="1093" alt="Rebanadas de pan de jamón con aceitunas y pasas" loading="lazy" decoding="async" ></div>
 <div class="photo-small two"><img src="assets/images/tortas-navidenas-480.webp" srcset="assets/images/tortas-navidenas-480.webp 480w, assets/images/tortas-navidenas-900.webp 900w" sizes="(max-width: 600px) 30vw, 240px" width="900" height="1147" alt="Tortas navideñas con glaseado y frutas decorativas" loading="lazy" decoding="async" ></div>
 <div class="sticker">🎁 Incluido con tu inscripción<b>Bono: Dulce de Lechoza</b></div>
 </div>
-<div class="hero-sale"><div class="hero-price"><div><span class="hero-price__normal">Precio normal <del>$120.000</del></span><strong class="hero-price__amount" aria-label="Precio promocional: 95 mil pesos">$95.000</strong></div><div class="hero-price__reserve">Reserva con<strong>$30.000</strong></div></div><p class="promotion-note">Precio promocional hasta el 18 de octubre · Cupos limitados</p><div class="ctas"><a class="btn hero-cta" href="https://wa.me/56933193773?text=Hola%2C%20vi%20el%20curso%20El%20Rey%20de%20la%20Navidad%20en%20su%20p%C3%A1gina%20y%20quiero%20reservar%20mi%20cupo%20con%20la%20promoci%C3%B3n%20de%20%2495.000.%20%C2%BFMe%20pueden%20enviar%20los%20datos%20para%20reservar%20con%20%2430.000%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="hero"><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg><span>Reservar con $30.000</span></a><a class="hero-secondary" href="#contenido">Ver lo que aprenderás ↓</a></div><p class="micro">WhatsApp: <strong>+56 9 3319 3773</strong></p></div>
+<div class="hero-sale"><div class="hero-price"><div><span class="hero-price__normal">Precio normal <del>$120.000</del></span><strong class="hero-price__amount" aria-label="Precio promocional: 95 mil pesos">$95.000</strong></div><div class="hero-price__reserve">Reserva con<strong>$30.000</strong></div></div><p class="promotion-note">Precio promocional hasta el 18 de octubre · Cupos limitados</p><div class="ctas"><a class="btn hero-cta" href="https://wa.me/56933193773?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20para%20el%20curso%20El%20Rey%20de%20la%20Navidad%20con%20%2430.000.%20%C2%BFMe%20comparten%20los%20pasos%20para%20reservar%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="hero"><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg><span>Reservar con $30.000</span></a><a class="hero-secondary" href="#contenido">Ver lo que aprenderás ↓</a></div><p class="micro">WhatsApp: <strong>+56 9 3319 3773</strong></p></div>
 </div></header>
 <section class="trust" aria-label="El curso en cuatro detalles"><div class="wrap trust-grid"><div class="trust-item">👩‍🍳 Presencial y práctico</div><div class="trust-item">🥖 Pan de Jamón</div><div class="trust-item">🍰 Tortas + Ponche</div><div class="trust-item">🎁 Bono Dulce de Lechoza</div></div></section>
-<section class="section" aria-labelledby="benefits-title"><div class="wrap"><div class="kicker" data-reveal>De tu cocina a la mesa navideña</div><h2 id="benefits-title" data-reveal>Aprende, prepara<br>y comparte.</h2><p class="sub" data-reveal>Haz tuyas estas preparaciones tradicionales y disfruta el orgullo de servir algo hecho por ti.</p><div class="cards3">
-<div class="card" data-reveal><div class="icon" aria-hidden="true">🥣</div><h3>Aprende la técnica</h3><p>Conoce el proceso de cada preparación, desde la base hasta la presentación.</p></div>
-<div class="card" data-reveal><div class="icon" aria-hidden="true">✨</div><h3>Crea con más confianza</h3><p>Suma conocimientos para preparar estos sabores en casa y explorar nuevos proyectos.</p></div>
-<div class="card" data-reveal><div class="icon" aria-hidden="true">🎄</div><h3>Comparte algo especial</h3><p>Lleva a tu mesa el sabor y el cuidado de una preparación hecha por tus propias manos.</p></div>
+<section class="section" aria-labelledby="benefits-title"><div class="wrap"><div class="kicker" data-reveal>De tu cocina a la mesa navideña</div><h2 id="benefits-title" data-reveal>Comprende el proceso.<br>Crea con más confianza.</h2><p class="sub" data-reveal>Conoce cada etapa de preparación y lleva lo aprendido a tu cocina.</p><div class="cards3">
+<div class="card" data-reveal><div class="icon" aria-hidden="true">🥣</div><h3>Comprende cada paso</h3><p>Conoce cómo se trabaja la masa, se incorpora el relleno y se forma el pan de jamón.</p></div>
+<div class="card" data-reveal><div class="icon" aria-hidden="true">✨</div><h3>Lleva las técnicas a casa</h3><p>Comprende el proceso de preparación para seguir practicando después del curso.</p></div>
+<div class="card" data-reveal><div class="icon" aria-hidden="true">🎄</div><h3>Amplía tu repertorio</h3><p>Suma preparaciones navideñas para compartir en familia o desarrollar tus propios proyectos.</p></div>
 </div></div></section>
-<section class="section soft" id="contenido" aria-labelledby="curriculum-title"><div class="wrap curriculum"><div class="course-photo" data-reveal><img src="assets/images/pan-de-jamon-horno-480.webp" srcset="assets/images/pan-de-jamon-horno-480.webp 480w, assets/images/pan-de-jamon-horno-900.webp 900w" sizes="(max-width: 600px) 92vw, (max-width: 900px) 90vw, 520px" width="900" height="1093" alt="Pan de jamón artesanal recién horneado" loading="lazy" decoding="async" ></div><div><div class="kicker" data-reveal>Qué aprenderás</div><h2 id="curriculum-title" data-reveal>Tres clásicos.<br>Una Navidad deliciosa.</h2><p class="sub" data-reveal>Preparaciones que combinan tradición, técnica y una presentación que invita a compartir.</p><div class="modules">
+<section class="section soft" id="contenido" aria-labelledby="curriculum-title"><div class="wrap"><div class="curriculum"><div class="course-photo" data-reveal><img src="assets/images/pan-de-jamon-horno-480.webp" srcset="assets/images/pan-de-jamon-horno-480.webp 480w, assets/images/pan-de-jamon-horno-900.webp 900w" sizes="(max-width: 600px) 92vw, (max-width: 900px) 90vw, 520px" width="900" height="1093" alt="Pan de jamón artesanal recién horneado" loading="lazy" decoding="async" ></div><div><div class="kicker" data-reveal>Qué aprenderás</div><h2 id="curriculum-title" data-reveal>Tres clásicos.<br>Una Navidad deliciosa.</h2><p class="sub" data-reveal>Preparaciones que combinan tradición, técnica y una presentación que invita a compartir.</p><div class="modules">
 <div class="module" data-reveal><div class="num" aria-hidden="true">01</div><div><h3>Pan de Jamón</h3><p>Masa, relleno, enrollado, formado y horneado de este clásico navideño.</p></div></div>
 <div class="module" data-reveal><div class="num" aria-hidden="true">02</div><div><h3>Tortas navideñas</h3><p>Preparación y presentación de tortas para darle un toque festivo a tu mesa.</p></div></div>
 <div class="module" data-reveal><div class="num" aria-hidden="true">03</div><div><h3>Ponche Crema</h3><p>Aprende el proceso de esta bebida tradicional para completar los sabores de Navidad.</p></div></div>
+</div></div></div>
+<div class="program" aria-labelledby="program-title">
+<h3 id="program-title" data-reveal><span>Día 1</span>El Arte del Pan de Jamón: De la masa al éxito</h3>
+<p class="sub" data-reveal>Aprende el proceso completo del pan de jamón, desde la preparación de la masa hasta el horneado y su acabado dorado.</p>
+<div class="program-grid">
+<details data-reveal><summary><span class="program-number">01</span><span class="program-summary"><strong>Introducción y teoría</strong><span>Conoce la tradición y los ingredientes que dan identidad a este clásico.</span></span></summary><div class="program-content"><ul><li>Historia y tradición del pan de jamón venezolano.</li><li>Selección de ingredientes de calidad: harina, jamón, tocineta, aceitunas y pasas.</li></ul></div></details>
+<details data-reveal><summary><span class="program-number">02</span><span class="program-summary"><strong>Masas y amasado</strong><span>Comprende cómo trabajar la masa y reconocer su textura en cada etapa.</span></span></summary><div class="program-content"><ul><li>Elaboración de la masa semidulce.</li><li>Textura, hidratación y desarrollo del gluten.</li><li>Amasado manual y con batidora/amasadora.</li><li>Primer levado, tiempos y temperatura.</li></ul></div></details>
+<details data-reveal><summary><span class="program-number">03</span><span class="program-summary"><strong>Relleno y armado perfecto</strong><span>Aprende a distribuir el relleno, enrollar y sellar el pan con cuidado.</span></span></summary><div class="program-content"><ul><li>Estirado correcto de la masa.</li><li>Distribución de jamón ahumado, tocineta, aceitunas y pasas.</li><li>Técnicas de enrollado firme.</li><li>Sellado de bordes para evitar huecos y desplazamientos del relleno.</li></ul></div></details>
+<details data-reveal><summary><span class="program-number">04</span><span class="program-summary"><strong>Horneado y acabados</strong><span>Descubre cómo cuidar la cocción y dar al pan su acabado dorado y brillante.</span></span></summary><div class="program-content"><ul><li>Segundo levado.</li><li>Decoración clásica del pan.</li><li>Uso de huevo, almíbar o papelón para el acabado dorado y brillante.</li><li>Temperaturas y tiempos de horneado.</li><li>Cómo reconocer el punto correcto de cocción.</li></ul></div></details>
 </div></div></div></section>
-<section class="section" aria-labelledby="bonus-title"><div class="wrap"><div class="bonus" data-reveal><div><div class="kicker">🎁 Un regalo para tu repertorio</div><h2 id="bonus-title">Tu inscripción incluye<br>Dulce de Lechoza.</h2><p>Un bono especial para sumar otra preparación a todo lo que vas a aprender.</p></div><div class="bonus-badge">DULCE<br> DE LECHOZA<small>BONO INCLUIDO</small></div></div></div></section>
+<section class="section" aria-labelledby="bonus-title"><div class="wrap"><div class="bonus" data-reveal><div><div class="kicker">🎁 Un regalo para tu repertorio</div><h2 id="bonus-title">Tu inscripción incluye<br>Dulce de Lechoza.</h2><p>Un complemento especial para ampliar tu repertorio de preparaciones navideñas.</p></div><div class="bonus-badge">DULCE<br> DE LECHOZA<small>BONO INCLUIDO</small></div></div></div></section>
 <section class="section soft" id="experiencia" aria-labelledby="experience-title"><div class="wrap"><div class="experience-intro"><div><div class="kicker" data-reveal>El valor de aprender haciendo</div><h2 id="experience-title" data-reveal>De la masa<br>al primer corte.</h2><p class="sub" data-reveal>Un curso práctico para conocer las preparaciones paso a paso. Estas fotografías muestran cómo elaboramos nuestros panes de jamón.</p></div><ol class="steps" aria-label="Etapas de la preparación" data-reveal><li><span>1</span>Amasa</li><li><span>2</span>Rellena</li><li><span>3</span>Da forma</li></ol></div><div class="process-grid">
 <figure class="process-photo" data-reveal><img src="assets/images/proceso-amasado-640.webp" width="640" height="853" loading="lazy" decoding="async" alt="Manos amasando sobre una mesa enharinada"><figcaption>El inicio: trabajar la masa</figcaption></figure>
 <figure class="process-photo" data-reveal><img src="assets/images/proceso-masa-640.webp" width="640" height="853" loading="lazy" decoding="async" alt="Masa formada antes de extenderla para el pan de jamón"><figcaption>Una masa lista para extender</figcaption></figure>
@@ -442,8 +489,18 @@ try {
 <figure class="gallery-photo" data-reveal><img src="assets/images/pan-de-jamon-vista-superior-480.webp" srcset="assets/images/pan-de-jamon-vista-superior-480.webp 480w, assets/images/pan-de-jamon-vista-superior-900.webp 900w" sizes="(max-width: 600px) 44vw, 560px" width="900" height="1200" alt="Dos panes de jamón completos vistos desde arriba sobre una rejilla" loading="lazy" decoding="async" ><figcaption>Tradición hecha a mano</figcaption></figure>
 <figure class="gallery-photo" data-reveal><img src="assets/images/pan-de-jamon-detalle-480.webp" srcset="assets/images/pan-de-jamon-detalle-480.webp 480w, assets/images/pan-de-jamon-detalle-900.webp 900w" sizes="(max-width: 600px) 44vw, 560px" width="900" height="1200" alt="Detalle de la corteza y el relleno de un pan de jamón artesanal" loading="lazy" decoding="async" ><figcaption>Un vistazo a cada detalle</figcaption></figure>
 </div><div class="social-proof"><p>Conoce más de nuestras creaciones en las cuentas oficiales.</p><div class="social-links"><a href="https://www.instagram.com/creacionesfrangelis/" target="_blank" rel="noopener noreferrer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a><a href="https://www.facebook.com/creacionesfranyelis" target="_blank" rel="noopener noreferrer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a></div></div></div></section>
-<section class="section soft" id="oferta" aria-labelledby="offer-title"><div class="wrap offer-panel"><div class="offer-copy"><div class="kicker" data-reveal>Tu próxima creación empieza aquí</div><h2 id="offer-title" data-reveal>Reserva hoy.<br>Aprende para Navidad.</h2><p class="sub" data-reveal>Congela tu precio promocional reservando con $30.000 y asegura tu lugar en El Rey de la Navidad.</p><ul class="offer-list" data-reveal><li><span class="check" aria-hidden="true">✓</span>Pan de Jamón, Tortas y Ponche Crema</li><li><span class="check" aria-hidden="true">✓</span>Curso presencial y práctico</li><li><span class="check" aria-hidden="true">✓</span>Bono de Dulce de Lechoza incluido</li></ul></div><div class="offer-card" data-reveal><p class="offer-label">El Rey de la Navidad</p><p class="offer-normal">Precio normal <del>$120.000</del></p><p class="offer-value" aria-label="Precio promocional: 95 mil pesos">$95.000</p><p class="promotion-note">Precio promocional hasta el 18 de octubre</p><div class="reserve-box"><span>Reserva hoy<br>tu cupo con</span><strong>$30.000</strong></div><p class="offer-bonus"><span aria-hidden="true">🎁</span>Incluye el bono de <strong>Dulce de Lechoza</strong></p><a class="btn" href="https://wa.me/56933193773?text=Hola%2C%20vi%20el%20curso%20El%20Rey%20de%20la%20Navidad%20en%20su%20p%C3%A1gina%20y%20quiero%20reservar%20mi%20cupo%20con%20la%20promoci%C3%B3n%20de%20%2495.000.%20%C2%BFMe%20pueden%20enviar%20los%20datos%20para%20reservar%20con%20%2430.000%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="offer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg><span>Quiero aprovechar los $95.000</span></a><p class="offer-footnote">Cupos limitados · Reserva por WhatsApp</p></div></div></section>
+<!-- Fotografía real suministrada y aprobada. Añadir el nombre público solo después de confirmarlo. -->
+<section class="section" id="instructora" aria-labelledby="instructor-title"><div class="wrap instructor-grid">
+<figure class="instructor-photo" data-reveal><img data-instructor-field="photo" src="assets/images/instructora-franyelis-480.webp" srcset="assets/images/instructora-franyelis-480.webp 480w, assets/images/instructora-franyelis-800.webp 800w" sizes="(max-width: 600px) 92vw, 440px" width="800" height="1000" loading="lazy" decoding="async" alt="Instructora de Creaciones Franyelis enrollando un pan de jamón en su cocina"></figure>
+<div class="instructor-copy" data-reveal><div class="kicker">Repostería con amor</div><h2 id="instructor-title">Aprende de la mano de Creaciones Franyelis</h2><p class="sub" data-instructor-field="presentation">Descubre el proceso de cada preparación de la mano de una apasionada por la repostería y las tradiciones navideñas, en una experiencia cercana y práctica.</p></div>
+</div></section>
+<!-- Completar y activar únicamente cuando se confirmen fecha, horario, duración y número total de jornadas. -->
+<template id="practical-info-template">
+<section class="section" aria-labelledby="practical-title"><div class="wrap"><h2 id="practical-title">Organiza tu experiencia</h2><dl class="practical-grid"><div class="detailbox"><dt>Fecha del curso</dt><dd data-pending-fact="course-date"></dd></div><div class="detailbox"><dt>Horario</dt><dd data-pending-fact="course-time"></dd></div><div class="detailbox"><dt>Duración total</dt><dd data-pending-fact="course-duration"></dd></div><div class="detailbox"><dt>Jornadas</dt><dd data-pending-fact="course-days"></dd></div></dl><p>Toromazote 76, Estación Central, Santiago de Chile.</p></div></section>
+</template>
+<section class="section soft" id="oferta" aria-labelledby="offer-title"><div class="wrap offer-panel"><div class="offer-copy"><div class="kicker" data-reveal>Tu próxima creación empieza aquí</div><h2 id="offer-title" data-reveal>Reserva hoy.<br>Aprende para Navidad.</h2><p class="sub" data-reveal>Da el primer paso con una reserva inicial de $30.000. Aprende los clásicos navideños de Creaciones Franyelis.</p><ul class="offer-list" data-reveal><li><span class="check" aria-hidden="true">✓</span>Pan de Jamón, Tortas y Ponche Crema</li><li><span class="check" aria-hidden="true">✓</span>Curso presencial y práctico</li><li><span class="check" aria-hidden="true">✓</span>Bono de Dulce de Lechoza incluido</li></ul></div><div class="offer-card" data-reveal><p class="offer-label">Curso El Rey de la Navidad</p><p class="offer-normal">Precio normal <del>$120.000 CLP</del></p><p class="offer-price-label">Precio promocional</p><p class="offer-value" aria-label="Precio promocional total: 95 mil pesos chilenos">$95.000 <span class="price-currency">CLP</span></p><p class="offer-saving">Ahorras $25.000</p><p class="promotion-note">Precio promocional hasta el 18 de octubre de 2026</p><div class="reserve-box"><span>Reserva inicial</span><strong>$30.000 <span class="price-currency">CLP</span></strong></div><p class="reserve-note">Los $30.000 son un abono de reserva. El precio total promocional del curso es $95.000 CLP.</p><p class="offer-bonus"><span aria-hidden="true">🎁</span>Incluye el bono de <strong>Dulce de Lechoza</strong></p><a class="btn" href="https://wa.me/56933193773?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20para%20el%20curso%20El%20Rey%20de%20la%20Navidad%20con%20%2430.000.%20%C2%BFMe%20comparten%20los%20pasos%20para%20reservar%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="offer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg><span>Quiero reservar con $30.000</span></a><p class="offer-footnote">Cupos limitados · Reserva por WhatsApp</p></div></div></section>
 <!-- Testimonio de ejemplo: all three names/opinions below are illustrative and the photo slots are placeholders. Replace the name, photo and quote fields with verified content; remove the example labels only after that verification. -->
+<template id="testimonials-template">
 <section class="section" id="testimonios" aria-labelledby="testimonials-title"><div class="wrap">
 <div class="testimonial-intro"><span class="testimonial-preview-note" data-reveal>Testimonios · Vista previa ilustrativa</span><h2 id="testimonials-title" data-reveal>La experiencia,<br>en palabras.</h2><p class="sub" data-reveal>Estos nombres y opiniones son ejemplos para revisar el diseño. Se sustituirán por testimonios y fotografías reales antes de publicar.</p></div>
 <div class="testimonials">
@@ -460,23 +517,30 @@ try {
 <blockquote data-testimonial-field="quote"><p>“Lo que más me gustó fue la claridad para enseñar y el ambiente del taller. Salí feliz con lo que preparé y con ganas de seguir practicando.”</p></blockquote><p class="testimonial-example">Testimonio de ejemplo</p>
 </article>
 </div></div></section>
+</template>
 <section class="section" id="preguntas" aria-labelledby="faq-title"><div class="wrap"><div class="kicker" data-reveal>Antes de reservar</div><h2 id="faq-title" data-reveal>Resolvemos tus dudas.</h2><p class="sub" data-reveal>La información esencial para dar el siguiente paso.</p><div class="faq">
-<details data-faq="contenido"><summary>¿Qué aprenderé durante el curso?</summary><div class="faq-answer"><p>Pan de Jamón, Tortas navideñas y Ponche Crema. Tu inscripción también incluye el bono de Dulce de Lechoza.</p></div></details>
-<details data-faq="reserva"><summary>¿Puedo reservar pagando $30.000?</summary><div class="faq-answer"><p>Sí. Puedes asegurar tu cupo reservando con $30.000. Escríbenos por WhatsApp para recibir los datos de reserva.</p></div></details>
-<details data-faq="promocion"><summary>¿Hasta cuándo está disponible el precio promocional?</summary><div class="faq-answer"><p>El precio promocional de $95.000 está disponible hasta el 18 de octubre. El precio normal es $120.000.</p></div></details>
-<details data-faq="como-reservar"><summary>¿Cómo reservo mi cupo?</summary><div class="faq-answer"><p>Escríbenos por <a href="https://wa.me/56933193773?text=Hola%2C%20vi%20el%20curso%20El%20Rey%20de%20la%20Navidad%20en%20su%20p%C3%A1gina%20y%20quiero%20reservar%20mi%20cupo%20con%20la%20promoci%C3%B3n%20de%20%2495.000.%20%C2%BFMe%20pueden%20enviar%20los%20datos%20para%20reservar%20con%20%2430.000%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="faq">WhatsApp al +56 9 3319 3773</a> y solicita los datos para reservar con $30.000.</p></div></details>
-<details data-faq="lugar"><summary>¿El curso es presencial y dónde se realizará?</summary><div class="faq-answer"><p>Sí, es presencial. Se realizará en Toromazote 76, Estación Central, Chile.</p></div></details>
-<details data-faq="bono"><summary>¿Está incluido el bono de Dulce de Lechoza?</summary><div class="faq-answer"><p>Sí. El bono de Dulce de Lechoza está incluido con tu inscripción.</p></div></details>
-<details data-faq="consulta"><summary>¿Cómo puedo hacer una pregunta antes de inscribirme?</summary><div class="faq-answer"><p>Puedes <a href="https://wa.me/56933193773?text=Hola%2C%20vi%20el%20curso%20El%20Rey%20de%20la%20Navidad%20y%20la%20promoci%C3%B3n%20de%20%2495.000.%20Quiero%20hacer%20una%20consulta%20antes%20de%20reservar%20mi%20cupo%20con%20%2430.000." target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="consult">consultar por WhatsApp</a>. Te ayudaremos a resolver tus dudas antes de reservar.</p></div></details>
+<details data-faq="contenido"><summary>¿Qué preparaciones aprenderé?</summary><div class="faq-answer"><p>Pan de Jamón, Tortas Navideñas y Ponche Crema. Tu inscripción también incluye el bono de Dulce de Lechoza.</p></div></details>
+<details data-faq="lugar"><summary>¿El curso es presencial y dónde se realizará?</summary><div class="faq-answer"><p>Sí, es presencial y práctico. Se realizará en Toromazote 76, Estación Central, Santiago de Chile.</p></div></details>
+<details data-faq="reserva"><summary>¿Cómo funciona la reserva de $30.000?</summary><div class="faq-answer"><p>El precio promocional total del curso es $95.000 CLP. Los $30.000 CLP son un abono de reserva, no el precio total. <a href="https://wa.me/56933193773?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20para%20el%20curso%20El%20Rey%20de%20la%20Navidad%20con%20%2430.000.%20%C2%BFMe%20comparten%20los%20pasos%20para%20reservar%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="faq">Escríbenos por WhatsApp</a> para recibir los pasos de reserva.</p></div></details>
+<details data-faq="promocion"><summary>¿Hasta cuándo está el precio promocional?</summary><div class="faq-answer"><p>El precio promocional de $95.000 CLP está disponible hasta el 18 de octubre de 2026. El precio normal es $120.000 CLP: ahorras $25.000.</p></div></details>
+<details data-faq="consulta"><summary>¿Puedo consultar antes de reservar?</summary><div class="faq-answer"><p>Sí. Puedes <a href="https://wa.me/56933193773?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20para%20el%20curso%20El%20Rey%20de%20la%20Navidad%20con%20%2430.000.%20%C2%BFMe%20comparten%20los%20pasos%20para%20reservar%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="consult">consultar por WhatsApp al +56 9 3319 3773</a> para resolver tus dudas antes de reservar.</p></div></details>
 
 </div><div class="location" data-reveal><div class="icon" aria-hidden="true">📍</div><div><strong>Nos encontramos en Estación Central</strong><p>Toromazote 76, Estación Central, Chile</p></div></div>
-<!-- Pending facts: course date/time, promotion closing time, participant requirements/materials, payment methods and remaining balance conditions. Do not publish until confirmed. -->
-<template id="pending-faq-template"><details><summary></summary><div class="faq-answer"><p></p></div></details></template>
+<!-- Información pendiente: responder y publicar solo después de confirmación comercial. No automatizar el vencimiento sin hora y zona horaria confirmadas. -->
+<template id="pending-faq-template">
+<details data-status="pending-confirmation"><summary>¿Necesito experiencia para participar?</summary><div class="faq-answer"><p data-pending-fact="requirements"></p></div></details>
+<details data-status="pending-confirmation"><summary>¿Cómo se desarrolla la práctica del taller?</summary><div class="faq-answer"><p data-pending-fact="practice-format"></p></div></details>
+<details data-status="pending-confirmation"><summary>¿Qué incluye el precio y qué debo llevar?</summary><div class="faq-answer"><p data-pending-fact="materials-and-inclusions"></p></div></details>
+<details data-status="pending-confirmation"><summary>¿Cuál es la fecha, el horario y la duración del taller?</summary><div class="faq-answer"><p data-pending-fact="schedule"></p></div></details>
+<details data-status="pending-confirmation"><summary>¿Cuándo debo pagar el saldo y qué medios de pago aceptan?</summary><div class="faq-answer"><p data-pending-fact="balance-and-payment"></p></div></details>
+<details data-status="pending-confirmation"><summary>¿Qué sucede si no puedo asistir?</summary><div class="faq-answer"><p data-pending-fact="cancellation"></p></div></details>
+<details data-status="pending-confirmation"><summary>¿En qué consiste el bono de Dulce de Lechoza?</summary><div class="faq-answer"><p data-pending-fact="bonus-format"></p></div></details>
+</template>
 </div></section>
-<section class="final" aria-labelledby="final-title"><div class="wrap"><h2 id="final-title" data-reveal>Esta Navidad, prepara algo delicioso.<br>Aprende a hacerlo tú.</h2><p data-reveal>Pan de Jamón, Tortas y Ponche Crema.<br>Tu inscripción incluye el bono de Dulce de Lechoza.</p><a class="btn" href="https://wa.me/56933193773?text=Hola%2C%20vi%20el%20curso%20El%20Rey%20de%20la%20Navidad%20en%20su%20p%C3%A1gina%20y%20quiero%20reservar%20mi%20cupo%20con%20la%20promoci%C3%B3n%20de%20%2495.000.%20%C2%BFMe%20pueden%20enviar%20los%20datos%20para%20reservar%20con%20%2430.000%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="final"><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg><span>Reservar mi cupo por WhatsApp</span></a></div></section>
+<section class="final" aria-labelledby="final-title"><div class="wrap"><h2 id="final-title" data-reveal>Haz que esta Navidad tenga<br>algo especial hecho por ti.</h2><p data-reveal>Aprende a preparar clásicos navideños y disfruta la experiencia de crear con tus propias manos.</p><a class="btn" href="https://wa.me/56933193773?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20para%20el%20curso%20El%20Rey%20de%20la%20Navidad%20con%20%2430.000.%20%C2%BFMe%20comparten%20los%20pasos%20para%20reservar%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="final"><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg><span>Reservar mi cupo por WhatsApp</span></a></div></section>
 </main>
-<footer class="footer"><div class="wrap"><div class="footerin"><a class="brand" href="#inicio" aria-label="Creaciones Franyelis, volver al inicio"><img src="assets/images/brand-logo.webp" width="160" height="160" loading="lazy" decoding="async" alt="Logo de Creaciones Franyelis"><span><b>Creaciones Franyelis</b><br><small>Repostería con amor</small></span></a><div class="footer-contact"><strong>Conversemos sobre tu cupo</strong><a href="https://wa.me/56933193773?text=Hola%2C%20vi%20el%20curso%20El%20Rey%20de%20la%20Navidad%20y%20la%20promoci%C3%B3n%20de%20%2495.000.%20Quiero%20hacer%20una%20consulta%20antes%20de%20reservar%20mi%20cupo%20con%20%2430.000." target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="footer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>+56 9 3319 3773</a><small>Toromazote 76, Estación Central, Chile</small></div><div class="social-links"><a href="https://www.instagram.com/creacionesfrangelis/" target="_blank" rel="noopener noreferrer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a><a href="https://www.facebook.com/creacionesfranyelis" target="_blank" rel="noopener noreferrer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a></div></div><div class="footer-bottom"><small>© 2026 Creaciones Franyelis. Todos los derechos reservados.</small><button class="share-course" data-source="footer" type="button" aria-label="Compartir curso"><svg class="ui-icon" aria-hidden="true"><use href="#icon-share"></use></svg><span class="share-label">Compartir curso</span></button><a class="back-top" href="#inicio">Volver arriba ↑</a></div></div></footer>
-<div id="floating-whatsapp" class="floating-whatsapp" hidden><div class="floating-whatsapp__full"><a class="floating-whatsapp__link" href="https://wa.me/56933193773?text=Hola%2C%20vi%20el%20curso%20El%20Rey%20de%20la%20Navidad%20en%20su%20p%C3%A1gina%20y%20quiero%20reservar%20mi%20cupo%20con%20la%20promoci%C3%B3n%20de%20%2495.000.%20%C2%BFMe%20pueden%20enviar%20los%20datos%20para%20reservar%20con%20%2430.000%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="mobile"><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg><span>Reservar con $30.000</span></a><button id="minimize-whatsapp" class="minimize-whatsapp" type="button" aria-label="Minimizar botón de WhatsApp">−</button></div><button id="restore-whatsapp" class="restore-whatsapp" type="button" aria-label="Mostrar opciones de reserva por WhatsApp" hidden><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg></button></div>
+<footer class="footer"><div class="wrap"><div class="footerin"><a class="brand" href="#inicio" aria-label="Creaciones Franyelis, volver al inicio"><img src="assets/images/brand-logo.webp" width="160" height="160" loading="lazy" decoding="async" alt="Logo de Creaciones Franyelis"><span><b>Creaciones Franyelis</b><br><small>Repostería con amor</small></span></a><div class="footer-contact"><strong>Conversemos sobre tu cupo</strong><a href="https://wa.me/56933193773?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20para%20el%20curso%20El%20Rey%20de%20la%20Navidad%20con%20%2430.000.%20%C2%BFMe%20comparten%20los%20pasos%20para%20reservar%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="footer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>+56 9 3319 3773</a><small>Toromazote 76, Estación Central, Chile</small></div><div class="social-links"><a href="https://www.instagram.com/creacionesfrangelis/" target="_blank" rel="noopener noreferrer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram</a><a href="https://www.facebook.com/creacionesfranyelis" target="_blank" rel="noopener noreferrer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>Facebook</a></div></div><div class="footer-bottom"><small>© 2026 Creaciones Franyelis. Todos los derechos reservados.</small><button class="share-course" data-source="footer" type="button" aria-label="Compartir curso"><svg class="ui-icon" aria-hidden="true"><use href="#icon-share"></use></svg><span class="share-label">Compartir curso</span></button><a class="back-top" href="#inicio">Volver arriba ↑</a></div></div></footer>
+<div id="floating-whatsapp" class="floating-whatsapp" hidden><div class="floating-whatsapp__full"><a class="floating-whatsapp__link" href="https://wa.me/56933193773?text=Hola%2C%20quiero%20reservar%20mi%20cupo%20para%20el%20curso%20El%20Rey%20de%20la%20Navidad%20con%20%2430.000.%20%C2%BFMe%20comparten%20los%20pasos%20para%20reservar%3F" target="_blank" rel="noopener noreferrer" data-conversion="whatsapp" data-source="mobile"><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg><span>Reservar con $30.000</span></a><button id="minimize-whatsapp" class="minimize-whatsapp" type="button" aria-label="Minimizar botón de WhatsApp">−</button></div><button id="restore-whatsapp" class="restore-whatsapp" type="button" aria-label="Mostrar opciones de reserva por WhatsApp" hidden><svg class="ui-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg></button></div>
 <div id="share-toast" class="share-toast" role="status" aria-live="polite" aria-atomic="true"></div>
 <div id="share-fallback" class="share-fallback" role="region" aria-label="Copiar enlace del curso" hidden><p>No pudimos copiar automáticamente. Mantén pulsado o selecciona el enlace para copiarlo.</p><input id="share-url" type="url" readonly aria-label="Enlace del curso"><button id="close-share-fallback" type="button">Cerrar</button></div>
 <script>
@@ -641,7 +705,7 @@ try {
       if (shareBusy) return;
       shareBusy = true;
       const source = button.dataset.source || 'share';
-      const url = window.location.href;
+      const url = 'https://www.creacionesfranyelis.com';
       emit('ShareClick', source, { method: typeof navigator.share === 'function' ? 'native' : 'copy' });
       try {
         if (typeof navigator.share === 'function') {
