@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Política de Cookies | Creaciones Franyelis</title>
-  <meta name="description" content="Borrador del inventario de tecnologías de Creaciones Franyelis: preferencias locales, Meta Pixel con consentimiento y Google Maps bajo demanda.">
+  <meta name="description" content="Propuesta de cookies de Creaciones Franyelis: preferencias, GA4 y Meta Pixel con consentimiento, Google Maps bajo demanda y Google Ads sin activar.">
   <meta name="robots" content="noindex,follow">
   <meta name="theme-color" content="#fffaf5">
   <link rel="canonical" href="https://www.creacionesfranyelis.com/politica-de-cookies/">
@@ -29,7 +29,7 @@
       <p class="legal-intro">Qué tecnologías utiliza esta web y cómo puedes elegir las que aceptas.</p>
       <aside class="legal-status" aria-labelledby="estado-borrador">
         <h2 id="estado-borrador">Borrador para revisión jurídica</h2>
-        <p>El inventario corresponde a la implementación preparada para revisión local. Las cookies que finalmente genere cada proveedor y sus duraciones deben contrastarse en la validación previa a la publicación definitiva.</p>
+        <p>Incorpora la identificación proporcionada por la empresa. Su comprobación documental y la revisión jurídica y operativa siguen pendientes. Google Ads permanece sin activar.</p>
       </aside>
       <nav class="legal-nav" aria-label="Documentos legales">
         <a href="/politica-de-privacidad/">Privacidad</a>
@@ -37,81 +37,104 @@
         <a href="/politica-de-cookies/" aria-current="page">Cookies</a>
       </nav>
       <article class="legal-card">
+        <section aria-labelledby="responsable">
+          <h2 id="responsable">1. Responsable y alcance</h2>
+          <p><strong>Almerida Shop SpA</strong>, RUT <strong>78.138.453-4</strong>, opera bajo el nombre comercial <strong>Creaciones Franyelis</strong> y es responsable del tratamiento de los datos que gestiona la empresa mediante las tecnologías descritas en esta política.</p>
+          <dl class="legal-summary">
+            <dt>Razón social y RUT</dt><dd>Almerida Shop SpA · RUT 78.138.453-4.</dd>
+            <dt>Representante legal de la sociedad</dt><dd>José Almerida.</dd>
+            <dt>Nombre comercial</dt><dd>Creaciones Franyelis.</dd>
+            <dt>Domicilio legal y tributario</dt><dd>Arturo Prat 1237, departamento 1604, Santiago, Región Metropolitana, Chile.</dd>
+            <dt>Lugar de realización del taller</dt><dd>Toro Mazote 76, Estación Central, Región Metropolitana, Chile.</dd>
+            <dt>Instructora</dt><dd>Franyelis Almerida, instructora de Creaciones Franyelis.</dd>
+          </dl>
+          <p>Contacto: <a href="mailto:info@creacionesfranyelis.com">info@creacionesfranyelis.com</a> y <a href="https://wa.me/56933193773" target="_blank" rel="noopener noreferrer">WhatsApp +56 9 3319 3773</a>. Esta política explica las tecnologías de <a href="https://www.creacionesfranyelis.com/">www.creacionesfranyelis.com</a> y distingue los servicios disponibles de aquellos preparados para una activación posterior.</p>
+        </section>
         <section aria-labelledby="que-son">
-          <h2 id="que-son">1. Cookies y tecnologías similares</h2>
-          <p>Las cookies son pequeños registros que un servicio puede guardar en tu navegador. El almacenamiento local cumple funciones parecidas, aunque no se envía automáticamente con cada solicitud. Un píxel puede comunicar interacciones a un proveedor externo incluso si el navegador limita las cookies.</p>
-          <p>El panel de esta web permite elegir por separado el marketing y el contenido externo de Google Maps. Guarda un registro necesario para recordar esas decisiones. Aun con permiso para el mapa, su carga requiere pulsar el botón de la sección del taller.</p>
+          <h2 id="que-son">2. Cookies y tecnologías similares</h2>
+          <p>Las cookies son registros que un servicio puede guardar en el navegador. El almacenamiento local recuerda información en ese navegador sin enviarla automáticamente con cada solicitud. Una etiqueta o píxel puede comunicar interacciones a un proveedor aun cuando el navegador limite sus cookies.</p>
+          <p>El panel permite elegir por separado <strong>analítica, marketing y contenido externo de Google Maps</strong>. Las categorías opcionales empiezan rechazadas si no hay una preferencia válida. Visitar o seguir navegando no supone aceptación.</p>
         </section>
         <section aria-labelledby="inventario">
-          <h2 id="inventario">2. Inventario de esta implementación</h2>
+          <h2 id="inventario">3. Servicios y estado de activación</h2>
           <div class="legal-inventory">
-            <section aria-labelledby="preferencias">
-              <h3 id="preferencias">Preferencia necesaria del panel</h3>
+            <section aria-labelledby="necesarias">
+              <h3 id="necesarias">Preferencia esencial del panel</h3>
               <dl class="legal-summary">
-                <dt>Tecnología</dt><dd>Almacenamiento local del navegador (<code>localStorage</code>): <code>franyelis_consent_v1</code>. Si no está disponible, se intenta guardar la misma preferencia en el almacenamiento de sesión (<code>sessionStorage</code>).</dd>
-                <dt>Responsable</dt><dd>Creaciones Franyelis.</dd>
-                <dt>Finalidad</dt><dd>Recordar tu aceptación o rechazo de marketing y de contenido externo de Google Maps, la versión del registro y el momento de la decisión.</dd>
-                <dt>Activación</dt><dd>Cuando guardas una elección en el panel. Rechazar opcionales también guarda la decisión.</dd>
-                <dt>Duración</dt><dd>180 días desde la elección cuando se utiliza almacenamiento local. Al vencer ese plazo, el panel vuelve a solicitar una decisión. La alternativa de almacenamiento de sesión dura durante esa sesión del navegador.</dd>
+                <dt>Estado</dt><dd>Disponible. Se guarda al aceptar, rechazar o modificar preferencias.</dd>
+                <dt>Tecnología</dt><dd><code>franyelis_consent_v1</code> en <code>localStorage</code>, con versión interna del registro. Si no está disponible, se intenta <code>sessionStorage</code>; si ambos están bloqueados, la elección solo puede mantenerse en la página abierta.</dd>
+                <dt>Finalidad</dt><dd>Recordar categorías aceptadas o rechazadas y el momento de la decisión. No contiene mensajes de WhatsApp ni datos bancarios.</dd>
+                <dt>Duración</dt><dd>180 días desde la decisión guardada en almacenamiento local. La alternativa de sesión dura esa sesión. Una versión incompatible o un registro vencido requieren volver a elegir; no se amplía una autorización anterior a nuevos servicios.</dd>
               </dl>
-              <p>Este registro no contiene mensajes de WhatsApp ni datos de pagos. Si el navegador bloquea ambos almacenamientos, la decisión solo se mantiene en la memoria de la página abierta y su persistencia no está garantizada. El código propio de la web no define cookies de sesión, inicio de sesión, carrito o pasarela bancaria.</p>
             </section>
-            <section aria-labelledby="marketing">
-              <h3 id="marketing">Marketing opcional: Meta Pixel</h3>
+            <section aria-labelledby="meta">
+              <h3 id="meta">Marketing: Meta Pixel</h3>
               <dl class="legal-summary">
-                <dt>Tecnología</dt><dd>Pixel <code>2596910080758723</code>, script de <code>connect.facebook.net</code> y comunicaciones con Meta.</dd>
-                <dt>Proveedor</dt><dd>Meta.</dd>
-                <dt>Finalidad</dt><dd>Medir visitas e interacciones con la landing y resultados de publicidad del curso.</dd>
-                <dt>Activación</dt><dd>Solo después de aceptar marketing. Las páginas legales no inicializan el Pixel.</dd>
-                <dt>Cookies asociadas</dt><dd>Meta puede crear <code>_fbp</code> para identificar el navegador y, cuando exista un identificador de clic de Meta, <code>_fbc</code>. Su creación concreta depende del contexto y de las restricciones del navegador.</dd>
-                <dt>Duración</dt><dd>La duración efectiva debe verificarse para las cookies observadas. No se asigna en este borrador una duración no comprobada.</dd>
+                <dt>Estado</dt><dd>Disponible en la landing, condicionado a una preferencia válida de marketing. No se inicializa en las páginas legales.</dd>
+                <dt>Proveedor y tecnología</dt><dd>Meta; Pixel <code>2596910080758723</code>.</dd>
+                <dt>Finalidad</dt><dd>Medir navegación e interacciones con el curso y resultados de campañas.</dd>
+                <dt>Datos y cookies posibles</dt><dd>Datos técnicos, URL e interacciones. Meta puede crear <code>_fbp</code> y, si existe un identificador de clic, <code>_fbc</code>. Su creación depende del contexto y del navegador.</dd>
+                <dt>Duración</dt><dd>Debe verificarse sobre las cookies efectivamente observadas; no se asigna un plazo no comprobado.</dd>
               </dl>
-              <p>La transmisión del Pixel puede incluir dirección IP, datos del navegador, URL visitada e interacciones con el curso. No se requiere marketing para consultar el contenido ni para abrir WhatsApp o las indicaciones del taller.</p>
-              <p>Consulta la <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">política de privacidad de Meta</a> y su <a href="https://www.facebook.com/privacy/policies/cookies/" target="_blank" rel="noopener noreferrer">política de cookies</a>.</p>
+              <p>Consulta las políticas de <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">privacidad</a> y <a href="https://www.facebook.com/privacy/policies/cookies/" target="_blank" rel="noopener noreferrer">cookies de Meta</a>.</p>
+            </section>
+            <section aria-labelledby="analitica">
+              <h3 id="analitica">Analítica: Google Analytics 4</h3>
+              <dl class="legal-summary">
+                <dt>Estado</dt><dd>Configurado con el identificador <code>G-QTSNJPFR93</code>, sujeto a consentimiento de analítica.</dd>
+                <dt>Proveedor y tecnología</dt><dd>Google; Google tag y GA4.</dd>
+                <dt>Finalidad</dt><dd>Medir visitas, visualización del curso y clics en WhatsApp o indicaciones con parámetros controlados, sin nombres, teléfonos, mensajes ni información bancaria.</dd>
+                <dt>Activación</dt><dd>Únicamente en la landing publicada en los dominios autorizados, con analítica aceptada. No se carga en las páginas legales ni en las versiones locales o de Preview. Aceptar analítica no activa marketing.</dd>
+                <dt>Cookies posibles</dt><dd>Al aceptar analítica, pueden utilizarse <code>_ga</code> y <code>_ga_*</code>. Su presencia y duración dependen de la configuración efectiva y de las restricciones del navegador.</dd>
+              </dl>
+              <p>Rechazar o retirar analítica impide posteriores eventos propios a GA4. Google puede recibir datos técnicos de conexión y navegación al cargar su etiqueta tras aceptar. Consulta la <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener noreferrer">política de privacidad de Google</a>.</p>
+            </section>
+            <section aria-labelledby="ads">
+              <h3 id="ads">Marketing: Google Ads</h3>
+              <dl class="legal-summary">
+                <dt>Estado</dt><dd>Preparado, <strong>no activado</strong>. Faltan el identificador de conversión y la etiqueta reales, además de su habilitación.</dd>
+                <dt>Finalidad futura</dt><dd>Medir campañas e interacciones como un clic en WhatsApp. Ese clic no se presenta como una reserva pagada.</dd>
+                <dt>Activación futura</dt><dd>Únicamente con configuración real, habilitación y marketing aceptado. La personalización publicitaria permanece denegada en esta preparación, incluso si aceptas marketing; no se activa remarketing.</dd>
+                <dt>Cookies posibles</dt><dd>Podrían utilizarse registros <code>_gcl_*</code> y tecnologías de Google. Se verificarán al activar la configuración efectiva.</dd>
+              </dl>
+              <p>No se instalan conversiones mejoradas ni se programa el envío de datos personales a Google Ads. Consulta <a href="https://policies.google.com/technologies/cookies?hl=es" target="_blank" rel="noopener noreferrer">cómo utiliza Google las cookies</a>.</p>
             </section>
             <section aria-labelledby="mapa">
-              <h3 id="mapa">Servicio externo bajo demanda: Google Maps</h3>
+              <h3 id="mapa">Contenido externo: Google Maps bajo demanda</h3>
               <dl class="legal-summary">
-                <dt>Tecnología</dt><dd>Mapa integrado de Google Maps, cargado tras una acción específica en la sección del taller.</dd>
-                <dt>Proveedor</dt><dd>Google.</dd>
-                <dt>Finalidad</dt><dd>Mostrar la ubicación de Toro Mazote 76.</dd>
-                <dt>Activación</dt><dd>Cuando pulsas «Permitir y cargar Google Maps» en la sección del taller. También puedes conceder el permiso de contenido externo desde el panel; eso permite la carga posterior, pero no descarga el mapa automáticamente. El botón de indicaciones abre Google Maps por separado y funciona aunque rechaces las opciones del panel.</dd>
-                <dt>Datos y almacenamiento</dt><dd>Al cargar el mapa se establece una conexión con Google, que puede recibir datos técnicos y utilizar almacenamiento según su servicio, tu sesión y tu navegador. No se enumeran cookies de Google que no se hayan observado.</dd>
+                <dt>Estado</dt><dd>Disponible bajo demanda.</dd>
+                <dt>Finalidad</dt><dd>Mostrar la ubicación del taller.</dd>
+                <dt>Activación</dt><dd>El mapa integrado requiere permiso de contenido externo y pulsar el botón para cargarlo. El permiso no activa analítica ni marketing y no descarga el mapa automáticamente.</dd>
+                <dt>Datos y duración</dt><dd>Google puede recibir datos técnicos y utilizar sus propias cookies. El inventario y su duración dependen del servicio y navegador, y deben comprobarse.</dd>
               </dl>
-              <p>Esta web no solicita directamente tu ubicación GPS. Si usas la ubicación actual dentro de Google Maps, la gestión de ese permiso corresponde a ese servicio y a tu dispositivo. Consulta la <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener noreferrer">política de privacidad de Google</a>.</p>
+              <p>«Cómo llegar» abre Google Maps por separado cuando lo eliges, incluso si rechazas el mapa integrado. Consulta la <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener noreferrer">política de Google</a>.</p>
             </section>
           </div>
         </section>
-        <section aria-labelledby="otras">
-          <h2 id="otras">3. Analítica, alojamiento y enlaces externos</h2>
-          <p><strong>Google Analytics, Google Tag Manager (GTM) y Conversions API no están instalados.</strong> No se han añadido cookies de analítica propias ni una categoría de analítica opcional que active un servicio inexistente.</p>
-          <p>Vercel aloja el sitio y entrega sus páginas. Los datos técnicos de alojamiento se describen en su <a href="https://vercel.com/legal/privacy-notice" target="_blank" rel="noopener noreferrer">aviso de privacidad</a>; no se declara su funcionamiento como una cookie inventada. Las fuentes y fotografías de esta preparación se sirven sin cargar Google Fonts u otra biblioteca externa de tipografías.</p>
-          <p>Los enlaces a WhatsApp, Instagram, Facebook y las indicaciones de Google Maps abren servicios externos cuando los utilizas. Esos servicios pueden tratar datos y utilizar sus propias tecnologías fuera de esta web.</p>
+        <section aria-labelledby="consent-mode">
+          <h2 id="consent-mode">4. Consent Mode v2 básico</h2>
+          <p>La integración comunica a Google cuatro estados: <code>analytics_storage</code> para analítica y <code>ad_storage</code> y <code>ad_user_data</code> para la medición autorizada de marketing. Todos parten en <code>denied</code> sin una decisión válida. <code>ad_personalization</code> se mantiene siempre en <code>denied</code> porque no se activa personalización ni remarketing.</p>
+          <p>Las etiquetas de Google no se cargan sin identificadores reales, habilitación y permiso para su finalidad. Se puede aceptar analítica y mantener los tres estados publicitarios denegados. Aceptar marketing no autoriza enviar contactos ni activa personalización. No se adopta un modo avanzado que envíe mediciones antes de consentir.</p>
+          <p>Estas decisiones corresponden a la medición de la web. No autorizan promociones por WhatsApp ni sustituyen la aceptación de las condiciones de reserva.</p>
         </section>
-        <section aria-labelledby="eleccion">
-          <h2 id="eleccion">4. Cómo administrar tu elección</h2>
-          <ul>
-            <li><strong>Aceptar todas:</strong> autoriza marketing de Meta y contenido externo de Google Maps. El mapa conserva su carga bajo demanda: no se descarga solo por aceptar.</li>
-            <li><strong>Rechazar opcionales:</strong> deja desactivados marketing y contenido externo. Puedes seguir utilizando el enlace de indicaciones.</li>
-            <li><strong>Configurar preferencias:</strong> permite revisar y guardar ambas elecciones por separado. En la primera decisión, las casillas opcionales están desmarcadas.</li>
-          </ul>
-          <p>Puedes volver a abrir el panel con <button class="legal-inline-button" type="button" data-cookie-settings>Configurar cookies</button>, disponible también en el pie de todas las páginas. Tu elección se aplica a este navegador y dominio; otro navegador, dispositivo, el vencimiento a los 180 días o la eliminación del almacenamiento pueden requerir una nueva elección.</p>
-          <p>Al retirar el permiso de marketing, la web bloquea los nuevos eventos que gestiona y solicita la revocación a Meta. Si el Pixel ya estaba activo y la retirada puede mantenerse al recargar, la página se recarga para detener ese código. Si el navegador impide conservar la retirada de forma segura y mantiene una aceptación anterior, otra visita podría volver a cargar el Pixel. En ese caso el panel indica que cierres la pestaña y elimines los datos de este sitio desde los controles del navegador antes de volver a visitarlo. Cerrar y reabrir la página por sí solo no garantiza que se conserve el rechazo.</p>
-          <p>El sitio intenta borrar las cookies propias <code>_fbp</code> y <code>_fbc</code> que sean accesibles desde este dominio. No puede garantizar el borrado de todas las cookies ya establecidas por terceros ni eliminar directamente el almacenamiento de otros dominios. Para revisar o borrar esas cookies utiliza los controles del navegador y las opciones del proveedor correspondiente.</p>
-          <p>Al retirar el permiso del mapa, se elimina el mapa integrado que estuviera cargado. Para volver a verlo se requiere una nueva elección y una acción de carga.</p>
-          <p>Retirar el permiso no revierte los datos que ya hubiera recibido el proveedor ni garantiza cancelar las solicitudes iniciadas antes de la retirada. Eliminar el mapa integrado tampoco borra el almacenamiento previo de Google. Para solicitudes sobre esos datos, consulta la <a href="/politica-de-privacidad/">Política de Privacidad</a> y los canales de cada servicio.</p>
-          <p>El navegador también permite borrar cookies y datos del sitio o limitar el almacenamiento de terceros. Si borras el registro local de preferencias, el panel volverá a solicitar una decisión.</p>
+        <section aria-labelledby="gestionar">
+          <h2 id="gestionar">5. Aceptar, rechazar y retirar</h2>
+          <p>Abre <button class="legal-inline-button" type="button" data-cookie-settings>Configurar cookies</button> en cualquier momento para aceptar categorías por separado, rechazar las opcionales o modificar una decisión. No necesitas aceptar seguimiento para ver el curso, reservar, compartir el enlace o usar las preguntas frecuentes.</p>
+          <p>Al retirar un permiso, la web bloquea futuras mediciones propias de esa finalidad, comunica la revocación cuando corresponda y elimina los registros propios accesibles asociados. Si una etiqueta ya se ejecutó, se recarga la página cuando la nueva decisión se ha guardado de forma segura. Si el navegador impide guardar la revocación, se muestra un aviso para cerrar las páginas del sitio y borrar sus datos antes de volver.</p>
+          <p>La retirada no borra datos ya transmitidos ni todas las cookies o registros de terceros. El navegador puede permitir su eliminación adicional. Para derechos sobre datos existentes, consulta la <a href="/politica-de-privacidad/">Política de Privacidad</a> o escribe a <a href="mailto:info@creacionesfranyelis.com">info@creacionesfranyelis.com</a>.</p>
         </section>
-        <section aria-labelledby="contacto">
-          <h2 id="contacto">5. Contacto y validación pendiente</h2>
-          <p>La responsable es <strong>Franyelis Almerida</strong>, bajo el nombre comercial Creaciones Franyelis. Puedes escribir por <a href="https://wa.me/56933193773?text=Hola%2C%20tengo%20una%20consulta%20sobre%20cookies%20y%20privacidad." target="_blank" rel="noopener noreferrer">WhatsApp al +56 9 3319 3773</a>.</p>
-          <p class="legal-pending"><strong>Antes de aprobar:</strong> contrastar este inventario del código con las cookies realmente observadas en el navegador de producción cuando se acepta marketing, revisar la configuración de Meta y los proveedores, y validar jurídicamente la información y los mecanismos de autorización. No se presenta este inventario como una medición de cookies de producción. La Ley N.º 21.719 entra en vigencia el 1 de diciembre de 2026; este borrador no certifica la adecuación al nuevo régimen.</p>
-          <p>Consulta la <a href="/politica-de-privacidad/">Política de Privacidad</a> para las fuentes normativas, conservación de datos y derechos, y los <a href="/terminos-y-condiciones/">Términos y Condiciones</a> para las reservas del taller.</p>
+        <section aria-labelledby="otros">
+          <h2 id="otros">6. Servicios externos y actualización</h2>
+          <p>Vercel recibe las conexiones necesarias para entregar la página. Los enlaces a WhatsApp, Instagram, Facebook y las indicaciones de Google abren servicios con sus propias condiciones cuando los utilizas. Las funciones esenciales del sitio no se presentan como permiso para usos publicitarios.</p>
+          <p>No se incorpora Google Tag Manager, una nueva plataforma de analítica distinta de GA4 ni Conversions API. Las cookies y duraciones efectivamente utilizadas deberán revisarse cuando cambie la configuración de Google o las restricciones del navegador.</p>
+          <p>Esta propuesta seguirá identificada como borrador hasta completar la comprobación documental de los datos proporcionados y la revisión jurídica, contractual y operativa. Google Ads permanece sin activar.</p>
         </section>
       </article>
     </main>
     <footer class="legal-footer">
       <p><strong>Creaciones Franyelis</strong> · © 2026</p>
+      <p>Empresa proveedora y responsable del tratamiento: <strong>Almerida Shop SpA</strong> · RUT 78.138.453-4.</p>
+      <p>Domicilio legal y tributario: Arturo Prat 1237, departamento 1604, Santiago, Región Metropolitana, Chile.<br>Lugar del taller: Toro Mazote 76, Estación Central, Región Metropolitana, Chile.</p>
       <nav aria-label="Enlaces legales del pie">
         <a href="/politica-de-privacidad/">Privacidad</a>
         <a href="/terminos-y-condiciones/">Términos y condiciones</a>
@@ -122,8 +145,9 @@
         <a href="https://www.instagram.com/creacionesfrangelis/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.facebook.com/creacionesfranyelis" target="_blank" rel="noopener noreferrer">Facebook</a>
         <a href="https://wa.me/56933193773" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="mailto:info@creacionesfranyelis.com">info@creacionesfranyelis.com</a>
       </nav>
-      <noscript><p>Para utilizar el panel de preferencias necesitas JavaScript. Sin él, esta página no carga el Pixel de Meta.</p></noscript>
+      <noscript><p>Para utilizar el panel de preferencias necesitas JavaScript. Esta página no carga las etiquetas de Meta ni de Google.</p></noscript>
     </footer>
   </div>
 </body>

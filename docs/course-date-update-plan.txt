@@ -1,0 +1,31 @@
+CREACIONES FRANYELIS — ACTUALIZACIÓN CONTROLADA DE OFERTA Y EDICIÓN
+
+Estado: preparado, pendiente de ejecución y autorización de publicación.
+Zona horaria: America/Santiago. Responsable operativo: pendiente de asignación por Almerida Shop SpA.
+Este documento no instala automatizaciones, contadores ni tareas programadas. No modifica Production. El responsable deberá preparar cada actualización con anticipación y obtener autorización para publicarla a tiempo.
+
+1. RETIRADA DE LA PROMOCIÓN
+
+La promoción de $95.000 CLP termina el 18 de octubre de 2026. Desde el 19 de octubre de 2026 a las 00:00, hora de Santiago, no debe presentarse como vigente. Ese límite equivale al 19 de octubre a las 03:00 UTC.
+
+Antes de ese límite, preparar y revisar un cambio manual en una rama de trabajo. Revisar de forma conjunta el hero, la sección de oferta, el resumen de precios, las FAQ, las tarjetas de ahorro, los CTA, el botón flotante, el mensaje de WhatsApp y los Términos y Condiciones. Retirar las afirmaciones de promoción vigente, el ahorro de $25.000 y el saldo promocional de $65.000 cuando se comuniquen como condiciones para una nueva reserva. Conservar las condiciones pactadas para las reservas ya confirmadas; no modificar retroactivamente su precio ni su saldo.
+
+No inventar otro precio, descuento, saldo, plazo o condición de reserva. El precio normal de $120.000 CLP ya está confirmado, pero cualquier presentación comercial posterior a la promoción y sus condiciones de contratación deberá revisarse y aprobarse expresamente. Si no existe una oferta posterior aprobada, usar una invitación a consultar disponibilidad e información, sin prometer el precio promocional ni confirmar reservas automáticamente.
+
+La imagen social actual también contiene el precio de $95.000, el precio normal y el abono de $30.000. Retirar la promoción solo en el HTML no resuelve ese anuncio. Preparar un arte sustituto aprobado, actualizar las referencias OG/Twitter y la versión de su URL, comprobar que se sirve públicamente y revisar su vista previa. La imagen aprobada actual se conserva hasta autorizar ese reemplazo. Las plataformas pueden mantener vistas previas anteriores en caché; no garantizar un plazo de renovación ni añadir parámetros al enlace que se comparte.
+
+Revisar además los textos y valores de los eventos locales relacionados con la oferta, sin cambiar sus nombres ni convertir clics en pagos. Mantener la configuración de GA4, los permisos de consentimiento y Meta Pixel. Los documentos o mensajes que describan reservas anteriores deben identificarlas por su fecha y condiciones, para no anunciar una promoción vencida como actual.
+
+2. CIERRE DE LA EDICIÓN DEL 25 DE OCTUBRE
+
+La jornada confirmada es el domingo 25 de octubre de 2026, de 10:00 a 16:00, hora de Santiago, en Toro Mazote 76, Estación Central. Al finalizar la jornada, revisar y publicar, con autorización, la versión informativa de esa edición realizada. No seguir aceptando reservas para esa edición ni anunciar nuevas fechas sin confirmación.
+
+Sustituir los CTA de reserva, el botón flotante y los mensajes precargados de WhatsApp por consultas generales que no inviten a reservar la edición ya realizada. Mantener los canales oficiales y los contactos necesarios para atender reservas existentes, cancelaciones, devoluciones y otras solicitudes. Cualquier cierre de inscripciones anterior al taller debe ser confirmado por la organización; este plan no inventa un plazo adicional.
+
+Conservar la URL canónica https://www.creacionesfranyelis.com/, el programa y las fechas de la edición como historial, con redacción que indique que la jornada ya se realizó. Revisar hero, oferta, FAQ, detalle práctico, redes, imagen social y metadata para que no impliquen una reserva disponible. Preservar el historial SEO sin redirecciones, cambios de dominio ni borrados innecesarios. El JSON-LD debe conservar las fechas reales; no reemplazarlas por futuras fechas ni asignar estados de cancelación o reprogramación que no hayan ocurrido. No anunciar ediciones, precios, disponibilidad o módulos adicionales sin confirmación.
+
+3. VERIFICACIÓN Y PUBLICACIÓN DE CADA CAMBIO
+
+Comprobar coherencia entre página, FAQ, WhatsApp, condiciones, imagen social y datos estructurados; navegación, consentimiento, compartir el enlace limpio, recursos y vista móvil/escritorio. Revisar el cambio de Git, ejecutar git diff --check y probar el Preview. Publicar únicamente tras la autorización correspondiente y confirmar la versión pública después. Registrar el commit, el momento de publicación y la persona responsable, sin guardar datos de participantes ni comprobantes en el repositorio.
+
+Pendientes antes de ejecutar: asignar responsable, aprobar el arte social y el texto comercial posterior a la promoción, confirmar el procedimiento de cierre de inscripciones y autorizar las publicaciones. Este plan está preparado; no se ha ejecutado ninguna actualización futura ni creado una automatización.

@@ -3,13 +3,15 @@
   if (window.FranyelisConsent) return;
 
   const KEY = 'franyelis_consent_v1';
-  const VERSION = 1;
+  // Revision 2 adds analytics and future Google Ads purposes. Old choices are
+  // requested again; a Meta-only acceptance is never expanded automatically.
+  const VERSION = 2;
   const MAX_AGE = 180 * 24 * 60 * 60 * 1000;
   const PIXEL_ID = '2596910080758723';
   const PIXEL_SCRIPT_ID = 'franyelis-meta-pixel';
   const listeners = new Set();
   const own = (value, name) => Object.prototype.hasOwnProperty.call(value, name);
-  const empty = () => ({ version: VERSION, timestamp: null, necessary: true, marketing: false, externalMap: false });
+  const empty = () => ({ version: VERSION, timestamp: null, necessary: true, analytics: false, marketing: false, externalMap: false });
   let state = empty();
   let decided = false;
   let pixelStarted = false;
@@ -17,7 +19,9 @@
   let reloading = false;
   let expiryTimer;
   const sentPageEvents = new Set();
-  let banner, dialog, marketingInput, mapInput, notice, returnFocus;
+  let banner, dialog, analyticsInput, marketingInput, mapInput, notice, returnFocus;
+  const googleLoaded = () => window.FranyelisMeasurement?.hasLoaded?.() === true;
+  const needsReload = (analyticsWithdrawn, marketingWithdrawn) => (marketingWithdrawn && pixelStarted) || ((analyticsWithdrawn || marketingWithdrawn) && googleLoaded());
 
   const getStorage = type => {
     try { return window[type]; } catch (_) { return null; }
@@ -27,11 +31,11 @@
     try {
       const value = JSON.parse(raw);
       if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
-      const keys = ['version', 'timestamp', 'necessary', 'marketing', 'externalMap'];
+      const keys = ['version', 'timestamp', 'necessary', 'analytics', 'marketing', 'externalMap'];
       if (Object.keys(value).length !== keys.length || !keys.every(key => own(value, key))) return null;
-      if (value.version !== VERSION || value.necessary !== true || typeof value.marketing !== 'boolean' || typeof value.externalMap !== 'boolean') return null;
+      if (value.version !== VERSION || value.necessary !== true || typeof value.analytics !== 'boolean' || typeof value.marketing !== 'boolean' || typeof value.externalMap !== 'boolean') return null;
       if (!Number.isSafeInteger(value.timestamp) || value.timestamp < 0 || value.timestamp > Date.now() || Date.now() - value.timestamp >= MAX_AGE) return null;
-      return { version: VERSION, timestamp: value.timestamp, necessary: true, marketing: value.marketing, externalMap: value.externalMap };
+      return { version: VERSION, timestamp: value.timestamp, necessary: true, analytics: value.analytics, marketing: value.marketing, externalMap: value.externalMap };
     } catch (_) { return null; }
   };
   const readStorage = type => {
@@ -46,8 +50,8 @@
   const isCourse = () => document.body?.dataset.page === 'course';
   const isAllowed = category => {
     if (category === 'necessary') return true;
-    if (!['marketing', 'externalMap'].includes(category) || state.timestamp === null || Date.now() - state.timestamp >= MAX_AGE || state[category] !== true) return false;
-    return category === 'externalMap' || (!blocked && !reloading);
+    if (!['analytics', 'marketing', 'externalMap'].includes(category) || state.timestamp === null || Date.now() - state.timestamp >= MAX_AGE || state[category] !== true) return false;
+    return category === 'externalMap' || (!reloading && (category === 'analytics' || !blocked));
   };
 
   // This is the only place that creates Meta's queue or makes a Meta request.
@@ -131,8 +135,10 @@
       try {
         const local = getStorage('localStorage');
         local?.removeItem(KEY);
-        reloadSafe = !readStorage('localStorage')?.marketing;
-      } catch (_) { reloadSafe = !readStorage('localStorage')?.marketing; }
+      } catch (_) { /* Check both fallback stores before allowing a reload. */ }
+      try { getStorage('sessionStorage')?.removeItem(KEY); } catch (_) { /* A stale session grant must not be recovered on reload. */ }
+      const saved = [readStorage('localStorage'), readStorage('sessionStorage')];
+      reloadSafe = saved.every(record => !record?.marketing && !record?.analytics);
       return { durable: false, reloadSafe };
     }
   };
@@ -155,12 +161,13 @@
     expiryTimer = setTimeout(() => {
       if (state.timestamp !== null && Date.now() - state.timestamp >= MAX_AGE) {
         const hadMarketing = state.marketing;
+        const reload = needsReload(state.analytics, hadMarketing);
         state = empty();
         decided = false;
         if (hadMarketing) stopPixel();
         if (banner) { banner.hidden = false; document.body.classList.add('consent-banner-open'); }
         notify();
-        if (hadMarketing && pixelStarted) {
+        if (reload) {
           reloading = true;
           try { window.location.reload(); } catch (_) { /* Consent remains revoked until renewal. */ }
         }
@@ -170,8 +177,12 @@
   const update = preferences => {
     if (!preferences || typeof preferences !== 'object' || Array.isArray(preferences) || ['__proto__', 'constructor', 'prototype'].some(key => own(preferences, key))) return snapshot();
     // A partial choice can preserve only permissions that are still valid.
-    let marketing = isAllowed('marketing'), externalMap = isAllowed('externalMap');
+    let analytics = isAllowed('analytics'), marketing = isAllowed('marketing'), externalMap = isAllowed('externalMap');
     try {
+      if (own(preferences, 'analytics')) {
+        if (typeof preferences.analytics !== 'boolean') return snapshot();
+        analytics = preferences.analytics;
+      }
       if (own(preferences, 'marketing')) {
         if (typeof preferences.marketing !== 'boolean') return snapshot();
         marketing = preferences.marketing;
@@ -182,7 +193,8 @@
       }
     } catch (_) { return snapshot(); }
     const withdrawing = state.marketing && !marketing;
-    state = { version: VERSION, timestamp: Date.now(), necessary: true, marketing, externalMap };
+    const reload = needsReload(state.analytics && !analytics, withdrawing);
+    state = { version: VERSION, timestamp: Date.now(), necessary: true, analytics, marketing, externalMap };
     decided = true;
     if (withdrawing) stopPixel();
     else if (!marketing) clearMetaCookies();
@@ -191,9 +203,9 @@
     closeSettings();
     notify();
     scheduleExpiry();
-    if (withdrawing && pixelStarted) {
+    if (reload) {
       if (stored.reloadSafe) {
-        // Reload destroys Meta's already executed code, preserving this exact location.
+        // Reload destroys already executed third-party code, preserving this location.
         reloading = true;
         try { window.location.reload(); } catch (_) { /* The gate stays closed if navigation is unavailable. */ }
       } else if (notice) {
@@ -209,13 +221,14 @@
   const openSettings = category => {
     if (!dialog) return;
     returnFocus = document.activeElement;
+    analyticsInput.checked = isAllowed('analytics');
     marketingInput.checked = isAllowed('marketing');
     mapInput.checked = isAllowed('externalMap');
     if (!dialog.open) {
       if (typeof dialog.showModal === 'function') dialog.showModal();
       else { dialog.setAttribute('open', ''); dialog.setAttribute('aria-modal', 'true'); }
     }
-    (category === 'externalMap' ? mapInput : dialog.querySelector('[data-consent-close]')).focus();
+    (category === 'externalMap' ? mapInput : category === 'analytics' ? analyticsInput : dialog.querySelector('[data-consent-close]')).focus();
   };
   const track = (method, event, parameters) => {
     if (!isCourse() || !isAllowed('marketing') || !['track', 'trackCustom'].includes(method)) return false;
@@ -235,9 +248,9 @@
   window.FranyelisConsent = Object.freeze({
     getPreferences: snapshot, preferences: snapshot, has: isAllowed, track, update, subscribe,
     openSettings, openPreferences: openSettings, requestExternalMap: () => openSettings('externalMap'),
-    revoke: category => update(category === 'marketing' ? { marketing: false } : category === 'externalMap' ? { externalMap: false } : { marketing: false, externalMap: false }),
-    acceptAll: () => update({ marketing: true, externalMap: true }),
-    rejectOptional: () => update({ marketing: false, externalMap: false })
+    revoke: category => update(category === 'analytics' ? { analytics: false } : category === 'marketing' ? { marketing: false } : category === 'externalMap' ? { externalMap: false } : { analytics: false, marketing: false, externalMap: false }),
+    acceptAll: () => update({ analytics: true, marketing: true, externalMap: true }),
+    rejectOptional: () => update({ analytics: false, marketing: false, externalMap: false })
   });
 
   const initUI = () => {
@@ -247,7 +260,7 @@
       <aside class="consent-banner" aria-labelledby="consent-banner-title" hidden>
         <button class="consent-dismiss" type="button" data-consent-dismiss aria-label="Ocultar aviso sin aceptar cookies">×</button>
         <div class="consent-banner-copy"><h2 id="consent-banner-title">Tu privacidad, tu elección</h2>
-          <p>Solo activamos Meta Pixel si aceptas marketing. El mapa integrado de Google se carga cuando lo solicitas y permites ese servicio. <a href="/politica-de-cookies/">Conoce nuestra política de cookies</a>.</p></div>
+          <p>Elige por separado analítica y marketing. Google Analytics requiere analítica; Meta Pixel requiere marketing. Google Ads sigue sin activar. El mapa se carga solo cuando lo solicitas. <a href="/politica-de-cookies/">Conoce nuestra política de cookies</a>.</p></div>
         <div class="consent-actions"><button type="button" data-consent-accept>Aceptar todas</button><button type="button" data-consent-reject>Rechazar opcionales</button><button type="button" data-consent-configure>Configurar preferencias</button></div>
       </aside>
       <dialog class="consent-dialog" aria-labelledby="consent-settings-title" aria-describedby="consent-settings-description">
@@ -255,7 +268,8 @@
         <h2 id="consent-settings-title">Configurar cookies</h2><p id="consent-settings-description">Las opciones son voluntarias. Puedes cambiarlas aquí en cualquier momento. Recordamos tu elección durante 180 días.</p>
         <form class="consent-form">
           <div class="consent-choice consent-choice--necessary"><div><strong>Necesarias</strong><p>Recuerdan tus preferencias y permiten el funcionamiento básico de la web.</p></div><span>Siempre activas</span></div>
-          <label class="consent-choice" for="consent-marketing"><div><strong>Marketing · Meta Pixel</strong><p>Permite medir visitas y acciones de interés en el curso mediante Meta. Se activa únicamente en la landing del taller.</p></div><input id="consent-marketing" type="checkbox" name="marketing"></label>
+          <label class="consent-choice" for="consent-analytics"><div><strong>Analítica · Google Analytics 4</strong><p>Permite medir visitas y acciones del curso en el dominio oficial mediante GA4, solo si aceptas. Puedes aceptar analítica y rechazar marketing.</p></div><input id="consent-analytics" type="checkbox" name="analytics"></label>
+          <label class="consent-choice" for="consent-marketing"><div><strong>Marketing · Meta y Google Ads</strong><p>Permite medir visitas y acciones mediante Meta Pixel en la landing. Google Ads está preparado, todavía sin activar. Esta elección no autoriza promociones por WhatsApp.</p></div><input id="consent-marketing" type="checkbox" name="marketing"></label>
           <label class="consent-choice" for="consent-external-map"><div><strong>Mapa externo · Google Maps</strong><p>Permite cargar el mapa integrado cuando solicites el mapa. Puedes obtener indicaciones con el enlace externo sin activar esta opción.</p></div><input id="consent-external-map" type="checkbox" name="externalMap"></label>
           <p class="consent-policy-links"><a href="/politica-de-privacidad/">Política de Privacidad</a><span aria-hidden="true"> · </span><a href="/politica-de-cookies/">Política de Cookies</a></p>
           <button class="consent-save" type="submit">Guardar preferencias</button>
@@ -265,15 +279,16 @@
     document.body.appendChild(container);
     banner = container.querySelector('.consent-banner');
     dialog = container.querySelector('.consent-dialog');
+    analyticsInput = container.querySelector('#consent-analytics');
     marketingInput = container.querySelector('#consent-marketing');
     mapInput = container.querySelector('#consent-external-map');
     notice = container.querySelector('.consent-notice');
-    container.querySelectorAll('[data-consent-accept]').forEach(button => button.addEventListener('click', () => update({ marketing: true, externalMap: true })));
-    container.querySelectorAll('[data-consent-reject]').forEach(button => button.addEventListener('click', () => update({ marketing: false, externalMap: false })));
+    container.querySelectorAll('[data-consent-accept]').forEach(button => button.addEventListener('click', () => update({ analytics: true, marketing: true, externalMap: true })));
+    container.querySelectorAll('[data-consent-reject]').forEach(button => button.addEventListener('click', () => update({ analytics: false, marketing: false, externalMap: false })));
     container.querySelector('[data-consent-configure]').addEventListener('click', () => openSettings());
     container.querySelector('[data-consent-dismiss]').addEventListener('click', hideBanner);
     dialog.querySelector('[data-consent-close]').addEventListener('click', closeSettings);
-    dialog.querySelector('form').addEventListener('submit', event => { event.preventDefault(); update({ marketing: marketingInput.checked, externalMap: mapInput.checked }); });
+    dialog.querySelector('form').addEventListener('submit', event => { event.preventDefault(); update({ analytics: analyticsInput.checked, marketing: marketingInput.checked, externalMap: mapInput.checked }); });
     dialog.addEventListener('cancel', event => { event.preventDefault(); closeSettings(); });
     dialog.addEventListener('close', () => {
       if (returnFocus?.isConnected && !returnFocus.closest('[hidden]')) returnFocus.focus({ preventScroll: true });
@@ -297,7 +312,7 @@
     // Prefer the newer session fallback over an old local acceptance after a failed write.
     const local = readStorage('localStorage'), session = readStorage('sessionStorage');
     let saved = session && (!local || session.timestamp > local.timestamp) ? session : local;
-    if (session && local && session.timestamp === local.timestamp) saved = { ...local, marketing: local.marketing && session.marketing, externalMap: local.externalMap && session.externalMap };
+    if (session && local && session.timestamp === local.timestamp) saved = { ...local, analytics: local.analytics && session.analytics, marketing: local.marketing && session.marketing, externalMap: local.externalMap && session.externalMap };
     if (saved) { state = saved; decided = true; }
     initUI();
     startPixel();
@@ -310,10 +325,11 @@
     let synchronized = null;
     if (incoming && state.timestamp !== null && incoming.timestamp <= state.timestamp) {
       // A delayed or simultaneous record may withdraw a permission, never grant one.
+      const analytics = state.analytics && incoming.analytics;
       const marketing = state.marketing && incoming.marketing;
       const externalMap = state.externalMap && incoming.externalMap;
-      if (marketing === state.marketing && externalMap === state.externalMap) {
-        if (incoming.timestamp !== state.timestamp || incoming.marketing !== state.marketing || incoming.externalMap !== state.externalMap) {
+      if (analytics === state.analytics && marketing === state.marketing && externalMap === state.externalMap) {
+        if (incoming.timestamp !== state.timestamp || incoming.analytics !== state.analytics || incoming.marketing !== state.marketing || incoming.externalMap !== state.externalMap) {
           const restored = persist(state);
           if (!restored.reloadSafe && notice) {
             notice.textContent = 'Tus preferencias siguen vigentes en esta pestaña, pero el navegador no pudo guardarlas. Cierra esta pestaña y elimina los datos de este sitio desde los controles del navegador antes de volver a visitarlo para evitar recuperar una elección anterior.';
@@ -321,24 +337,25 @@
         }
         return;
       }
-      incoming = { ...state, marketing, externalMap };
+      incoming = { ...state, analytics, marketing, externalMap };
       // Keep the conservative result on reload without renewing the latest choice.
       synchronized = persist(incoming);
     }
     const withdrawing = state.marketing && !incoming?.marketing;
+    const reload = needsReload(state.analytics && !incoming?.analytics, withdrawing);
     state = incoming || empty();
     decided = !!incoming;
     if (withdrawing) stopPixel();
-    if (dialog?.open) { marketingInput.checked = isAllowed('marketing'); mapInput.checked = isAllowed('externalMap'); }
+    if (dialog?.open) { analyticsInput.checked = isAllowed('analytics'); marketingInput.checked = isAllowed('marketing'); mapInput.checked = isAllowed('externalMap'); }
     if (decided) hideBanner();
     else if (banner) { banner.hidden = false; document.body.classList.add('consent-banner-open'); }
     notify();
     scheduleExpiry();
-    if (withdrawing && pixelStarted) {
-      if (!synchronized) {
-        try { getStorage('sessionStorage')?.removeItem(KEY); } catch (_) { /* The gate is already closed. */ }
-      }
-      if (!synchronized || synchronized.reloadSafe) {
+    if (reload) {
+      // A removed/invalid record can otherwise leave an older session grant.
+      // Keep an explicit denial safely before destroying executed vendor code.
+      const stored = synchronized || persist({ ...state, timestamp: state.timestamp ?? Date.now() });
+      if (stored.reloadSafe) {
         reloading = true;
         try { window.location.reload(); } catch (_) { /* Keep the revoked state in memory. */ }
       } else if (notice) {
