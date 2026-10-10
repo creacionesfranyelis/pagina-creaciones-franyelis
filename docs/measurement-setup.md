@@ -43,9 +43,28 @@ No se acumulan ni reproducen clics ocurridos antes del consentimiento. Una acept
 | `whatsapp_click` | Clic real en el enlace de contacto, incluido teclado y botón central | Un evento por acción | `conversion` dirigida exclusivamente al ID/Label de WhatsApp |
 | `directions_click` | Clic real en Cómo llegar | Un evento por acción | No es conversión |
 
-Cada llamada usa `send_to` explícito: el evento de GA4 no se distribuye automáticamente a Ads y viceversa. Los parámetros permitidos son `course_id`, un `source` enumerado y datos estáticos de página. La dirección enviada es siempre `https://www.creacionesfranyelis.com/`, sin query, hash ni URL del Preview; `page_referrer` es vacío. Nunca se leen o envían teléfono, mensaje, correo, nombre de visitante, comprobante, cuenta bancaria, texto de enlace o href de WhatsApp. Un clic no confirma una reserva, un pago o una compra; no se envían `purchase`, `transaction_id`, precio o abono como valor de conversión.
+Cada llamada usa `send_to` explícito: el evento de GA4 no se distribuye automáticamente a Ads y viceversa. Los parámetros propios permitidos son `course_id`, un `cta_location` enumerado y datos estáticos de página. El contrato local del handler conserva `{ source }`, pero ese valor se transmite a GA4 únicamente como `cta_location`, en `whatsapp_click` y `directions_click`; no se altera el parámetro independiente de Meta ni los hooks locales. La dirección enviada es siempre `https://www.creacionesfranyelis.com/`, sin query, hash ni URL del Preview; `page_referrer` es vacío. No se extraen ni reenvían datos de contacto, mensajes, comprobantes, cuentas bancarias, texto de enlace ni href de WhatsApp. Un clic no confirma una reserva, un pago o una compra; no se envían `purchase`, `transaction_id`, precio o abono como valor de conversión.
 
-Esta minimización limita la atribución por UTM/referrer en GA4. No prometer informes de campañas completos sin revisar y aprobar después una estrategia de atribución compatible. Google recibe necesariamente datos técnicos de conexión cuando se solicita su etiqueta autorizada. La ausencia de datos personales en los parámetros propios no convierte la medición en anónima.
+### Atribución UTM controlada
+
+Después de obtener permiso de analítica, y únicamente al configurar por primera vez el destino GA4 autorizado, se leen `utm_source`, `utm_medium`, `utm_campaign` y `utm_content` de la URL actual. Se incorporan como `campaign_source`, `campaign_medium`, `campaign_name` y `campaign_content` a `gtag('config', 'G-QTSNJPFR93', ...)`, antes del primer `page_view`. Los eventos posteriores heredan ese ámbito de configuración; no se añaden overrides de campaña a los clics, un segundo `config`, un evento `campaign_details` ni un `session_start` manual. No se modifican el `set` global, `page_location`, `page_referrer` ni `ignore_referrer`.
+
+La política admite únicamente códigos comerciales aprobados, además de exigir el patrón `^[a-z][a-z0-9_-]*$` y límites de longitud:
+
+| Parámetro | Valores admitidos | Longitud máxima |
+| --- | --- | --- |
+| `utm_source` | `fb`, `facebook`, `ig`, `instagram` | 16 |
+| `utm_medium` | `paid_social` | 16 |
+| `utm_campaign` | `rey_navidad_oct2026` | 64 |
+| `utm_content` | `anuncio_1_foto` | 64 |
+
+Fuente, medio y campaña son obligatorios para transmitir la combinación. Contenido es opcional; si aparece, debe ser válido. Si cualquiera de los cuatro parámetros admitidos está duplicado, vacío, excede su límite o contiene un valor no aprobado, se omite toda la combinación sin impedir la medición consentida. No se recortan ni normalizan valores para convertir entradas sospechosas en válidas. `utm_term`, otros UTM y el resto de la query no se extraen ni se envían. La lista cerrada impide que un nombre o identificador personal que parezca un slug se acepte como campaña; futuras campañas o creatividades requieren revisar y ampliar explícitamente esta lista.
+
+No se leen los valores de campaña antes del consentimiento, no se guardan en cookies ni storage y no se conservan entre documentos. La aceptación tardía puede utilizar los UTM si siguen en la URL; regresar desde una página legal mediante un enlace limpio puede perderlos. La recarga con permiso vigente vuelve a validar la URL actual. No se reproducen visitas ni clics anteriores a la aceptación.
+
+La configuración sigue la [referencia de campos de GA4](https://developers.google.com/analytics/devguides/collection/ga4/reference/config) y el [ámbito y precedencia de parámetros de Google tag](https://developers.google.com/tag-platform/gtagjs/reference#parameter_scope). Las pruebas aisladas pueden verificar validación, consentimiento, orden de comandos y herencia simulada, pero no acreditan el procesamiento real de adquisición de sesiones. Tras publicación autorizada, comprobar los campos de campaña en las solicitudes y DebugView, y después las dimensiones de adquisición **de la sesión**, sin confundirlas con dimensiones de evento o primer usuario. No añadir `session_start` para intentar corregir informes.
+
+La minimización del referente sigue limitando la atribución de visitas sin UTM admitidos. Esta actualización no recupera campañas históricas ni modifica informes o ajustes remotos. Google recibe necesariamente datos técnicos de conexión cuando se solicita su etiqueta autorizada. La ausencia de datos personales en los parámetros propios no convierte la medición en anónima.
 
 ## Revisión de GA4 realizada el 9 de octubre de 2026
 

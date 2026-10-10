@@ -6,6 +6,13 @@
   const PAGE_LOCATION = 'https://www.creacionesfranyelis.com/';
   const PAGE_TITLE = 'Curso El Rey de la Navidad | Creaciones Franyelis';
   const COURSE_ID = 'el-rey-de-la-navidad-2026';
+  // Approved campaign codes only: a slug pattern alone cannot exclude personal data.
+  const CAMPAIGN_PARAMETERS = [
+    ['utm_source', 'campaign_source', 16, ['fb', 'facebook', 'ig', 'instagram']],
+    ['utm_medium', 'campaign_medium', 16, ['paid_social']],
+    ['utm_campaign', 'campaign_name', 64, ['rey_navidad_oct2026']],
+    ['utm_content', 'campaign_content', 64, ['anuncio_1_foto']]
+  ];
   const config = window.FranyelisMeasurementConfig || {};
   const ga4 = config.ga4 || {}, ads = config.ads || {};
   const gaId = typeof ga4.measurementId === 'string' ? ga4.measurementId : '';
@@ -42,6 +49,22 @@
     try { gtag(...args); return true; } catch (_) { return false; }
   };
   const pageData = () => ({ page_location: PAGE_LOCATION, page_referrer: '', page_title: PAGE_TITLE, course_id: COURSE_ID });
+  const readCampaign = () => {
+    if (!allowedPage() || !gaConfigured || !has('analytics')) return {};
+    try {
+      const parameters = new URLSearchParams(window.location.search);
+      const campaign = {};
+      for (const [parameter, field, limit, approved] of CAMPAIGN_PARAMETERS) {
+        const values = parameters.getAll(parameter);
+        if (!values.length && parameter === 'utm_content') continue;
+        if (values.length !== 1) return {};
+        const value = values[0];
+        if (!value || value.length > limit || !/^[a-z][a-z0-9_-]*$/.test(value) || !approved.includes(value)) return {};
+        campaign[field] = value;
+      }
+      return campaign;
+    } catch (_) { return {}; }
+  };
   const clearGoogleCookies = category => {
     let names;
     try { names = document.cookie.split(';').map(value => value.split('=')[0].trim()); } catch (_) { return; }
@@ -83,7 +106,9 @@
       gaStarted = true;
       window['ga-disable-' + gaId] = false;
       command('config', gaId, {
-        ...pageData(), send_page_view: false, groups: 'franyelis_analytics', ignore_referrer: true,
+        // Target-scoped campaign fields are inherited by the first view and later
+        // events; do not reconfigure GA4 or override campaigns on CTA clicks.
+        ...pageData(), ...readCampaign(), send_page_view: false, groups: 'franyelis_analytics', ignore_referrer: true,
         allow_google_signals: false, allow_ad_personalization_signals: false
       });
     }
@@ -137,12 +162,13 @@
     if (!canAnalytics() && !(name === 'whatsapp_click' && canAds())) return false;
     // Only this small enumeration leaves the page; href, message, free text, user
     // details and arbitrary caller parameters are never forwarded to Google.
-    let source = 'other';
+    let ctaLocation = 'other';
     try {
-      if (['hero', 'offer', 'ebook', 'final', 'floating', 'faq', 'footer', 'consult', 'workshop-map'].includes(parameters.source)) source = parameters.source;
-    } catch (_) { /* Use a neutral source for malformed input. */ }
+      // Keep the local caller contract; only the GA4 event parameter is renamed.
+      if (['hero', 'offer', 'ebook', 'final', 'floating', 'faq', 'footer', 'consult', 'workshop-map'].includes(parameters.source)) ctaLocation = parameters.source;
+    } catch (_) { /* Use a neutral location for malformed input. */ }
     actions.add(action);
-    let sent = sendAnalytics(name, { source });
+    let sent = sendAnalytics(name, { cta_location: ctaLocation });
     if (name === 'whatsapp_click' && canAds()) {
       sent = command('event', 'conversion', { ...pageData(), send_to: adsId + '/' + adsLabel }) || sent;
     }
