@@ -6,11 +6,11 @@
   const root = document.documentElement;
   const isActive = () => ENABLED && Number.isFinite(Date.now()) && Date.now() < DEADLINE;
   const labels = {
-    hero: 'Reservar con $30.000', mobile: 'Reservar con $30.000',
+    hero: 'Reservar con $20.000', mobile: 'Reservar con $20.000',
     ebook: 'Reservar mi cupo + recibir mi ebook', final: 'Reservar mi cupo por WhatsApp'
   };
   const inquiry = 'Hola, quiero información para inscribirme en el curso El Rey de la Navidad.';
-  const ebookInquiry = 'Hola, quiero reservar mi cupo para el curso El Rey de la Navidad con un abono de $30.000 y recibir el ebook De tu cocina a tu negocio. ¿Me comparten los pasos y cómo confirmar mi reserva hasta el 18 de octubre?';
+  const ebookInquiry = 'Hola, quiero reservar con un abono de $20.000 mi cupo para el curso de Pan de Jamón El Rey de la Navidad, que incluye bonus de Ponche Crema y el ebook De tu cocina a tu negocio por reserva anticipada. ¿Me comparten los pasos para confirmar mi reserva hasta el 18 de octubre?';
   let initialized = false, timer;
   const sync = () => {
     const active = isActive();
