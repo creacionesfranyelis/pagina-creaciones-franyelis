@@ -9,6 +9,9 @@
   const MAX_AGE = 180 * 24 * 60 * 60 * 1000;
   const PIXEL_ID = '2596910080758723';
   const PIXEL_SCRIPT_ID = 'franyelis-meta-pixel';
+  // Meta-only production gate; consent and Google measurement remain independent.
+  const PIXEL_HOSTS = ['www.creacionesfranyelis.com', 'creacionesfranyelis.com'];
+  const isPixelOrigin = () => window.location.protocol === 'https:' && PIXEL_HOSTS.includes(window.location.hostname);
   const listeners = new Set();
   const own = (value, name) => Object.prototype.hasOwnProperty.call(value, name);
   const empty = () => ({ version: VERSION, timestamp: null, necessary: true, analytics: false, marketing: false, externalMap: false });
@@ -56,13 +59,13 @@
 
   // This is the only place that creates Meta's queue or makes a Meta request.
   const startPixel = () => {
-    if (pixelStarted || !isCourse() || !isAllowed('marketing')) return;
+    if (pixelStarted || !isPixelOrigin() || !isCourse() || !isAllowed('marketing')) return;
     pixelStarted = true;
     try {
       if (typeof window.fbq !== 'function') {
         const fbq = function () {
           const revoke = arguments[0] === 'consent' && arguments[1] === 'revoke';
-          if (!revoke && (blocked || reloading || !isAllowed('marketing'))) return;
+          if (!isPixelOrigin() || (!revoke && (blocked || reloading || !isAllowed('marketing')))) return;
           if (fbq.callMethod) fbq.callMethod.apply(fbq, arguments);
           else fbq.queue.push(arguments);
         };
@@ -110,7 +113,7 @@
     blocked = true;
     try {
       if (typeof window.fbq === 'function') {
-        window.fbq('consent', 'revoke');
+        if (isPixelOrigin()) window.fbq('consent', 'revoke');
         if (Array.isArray(window.fbq.queue)) window.fbq.queue.length = 0;
       }
     } catch (_) { /* Continue removing owned resources even if Meta fails. */ }
@@ -232,7 +235,7 @@
     (category === 'externalMap' ? mapInput : category === 'analytics' ? analyticsInput : dialog.querySelector('[data-consent-close]')).focus();
   };
   const track = (method, event, parameters) => {
-    if (!isCourse() || !isAllowed('marketing') || !['track', 'trackCustom'].includes(method)) return false;
+    if (!isPixelOrigin() || !isCourse() || !isAllowed('marketing') || !['track', 'trackCustom'].includes(method)) return false;
     const standard = ['PageView', 'ViewContent', 'Contact'];
     const custom = ['WhatsAppClick', 'ShareCourse', 'CopyCourseLink'];
     if (!(method === 'track' ? standard : custom).includes(event)) return false;
