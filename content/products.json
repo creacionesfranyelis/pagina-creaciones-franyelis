@@ -1,0 +1,1710 @@
+{
+  "schemaVersion": 1,
+  "publication": {
+    "status": "local_review",
+    "robots": "noindex,follow"
+  },
+  "policies": {
+    "prices": "pending_confirmation",
+    "availability": "pending_confirmation",
+    "catalogAttributes": "documented_reference_to_reconfirm",
+    "orderChannel": "whatsapp",
+    "delivery": "to_agree_before_order"
+  },
+  "categories": [
+    {
+      "id": "tortas",
+      "name": "Tortas y Repostería",
+      "path": "/productos/tortas/",
+      "headline": "Tortas para celebrar a tu manera.",
+      "description": "Cuéntanos la ocasión y la idea que tienes en mente. Consulta diseños, tamaños y rellenos para una torta personalizada.",
+      "subcategories": [
+        {
+          "id": "celebraciones",
+          "name": "Celebraciones"
+        }
+      ],
+      "seo": {
+        "title": "Tortas y Repostería | Creaciones Franyelis",
+        "description": "Cuéntanos la ocasión y la idea que tienes en mente. Consulta diseños, tamaños y rellenos para una torta personalizada."
+      }
+    },
+    {
+      "id": "panaderia",
+      "name": "Panadería Artesanal",
+      "path": "/productos/panaderia/",
+      "headline": "Tradición que se comparte.",
+      "description": "Descubre nuestro Pan de Jamón artesanal. Consulta la presentación y disponibilidad para tu próxima mesa compartida.",
+      "subcategories": [
+        {
+          "id": "panes",
+          "name": "Panes artesanales"
+        }
+      ],
+      "seo": {
+        "title": "Panadería Artesanal | Creaciones Franyelis",
+        "description": "Descubre nuestro Pan de Jamón artesanal. Consulta la presentación y disponibilidad para tu próxima mesa compartida."
+      }
+    },
+    {
+      "id": "comida-venezolana",
+      "name": "Comida Tradicional Venezolana",
+      "path": "/productos/comida-venezolana/",
+      "headline": "Sabores que nos reúnen.",
+      "description": "Hallacas, bollitos y nata venezolana. Encuentra preparaciones tradicionales y consulta las opciones para tu pedido.",
+      "subcategories": [
+        {
+          "id": "tradicionales",
+          "name": "Tradicionales"
+        },
+        {
+          "id": "complementos",
+          "name": "Complementos"
+        }
+      ],
+      "seo": {
+        "title": "Comida Tradicional Venezolana | Creaciones Franyelis",
+        "description": "Hallacas, bollitos y nata venezolana. Encuentra preparaciones tradicionales y consulta las opciones para tu pedido."
+      }
+    },
+    {
+      "id": "pasapalos",
+      "name": "Pasapalos y Catering",
+      "path": "/productos/pasapalos/",
+      "headline": "Pequeños bocados. Grandes momentos.",
+      "description": "Explora tequeños, pastelitos, empanadas y combinaciones para compartir. Elige el tipo de producto y consulta tu presentación por WhatsApp.",
+      "subcategories": [
+        {
+          "id": "tequenos",
+          "name": "Tequeños"
+        },
+        {
+          "id": "pastelitos",
+          "name": "Pastelitos"
+        },
+        {
+          "id": "empanadas",
+          "name": "Empanadas"
+        },
+        {
+          "id": "mandocas",
+          "name": "Mandocas"
+        },
+        {
+          "id": "papitas-de-yuca",
+          "name": "Papitas de yuca"
+        },
+        {
+          "id": "bandejas",
+          "name": "Bandejas y combinaciones"
+        }
+      ],
+      "seo": {
+        "title": "Pasapalos y Catering | Creaciones Franyelis",
+        "description": "Explora tequeños, pastelitos, empanadas y combinaciones para compartir. Elige el tipo de producto y consulta tu presentación por WhatsApp."
+      }
+    },
+    {
+      "id": "bebidas",
+      "name": "Bebidas Artesanales",
+      "path": "/productos/bebidas/",
+      "headline": "Un brindis con tradición.",
+      "description": "Conoce nuestro Ponche Crema. Consulta las presentaciones y disponibilidad para acompañar tus momentos especiales.",
+      "subcategories": [
+        {
+          "id": "artesanales",
+          "name": "Artesanales"
+        }
+      ],
+      "seo": {
+        "title": "Bebidas Artesanales | Creaciones Franyelis",
+        "description": "Conoce nuestro Ponche Crema. Consulta las presentaciones y disponibilidad para acompañar tus momentos especiales."
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "tortas-personalizadas",
+      "slug": "tortas-personalizadas",
+      "categoryId": "tortas",
+      "subcategoryId": "celebraciones",
+      "name": "Tortas personalizadas",
+      "description": "Una torta para tu cumpleaños o celebración. Cuéntanos tu idea y cotiza el diseño, tamaño y relleno.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [
+        {
+          "id": "torta-rosada",
+          "base": "torta-rosada-instagram",
+          "max": 640,
+          "width": 640,
+          "height": 640,
+          "alt": "Torta de celebración con crema rosada y blanca de Creaciones Franyelis",
+          "caption": "Ejemplo de diseño. Cotiza la personalización de tu torta."
+        },
+        {
+          "id": "torta-celebracion",
+          "base": "torta-celebracion-instagram",
+          "max": 640,
+          "width": 640,
+          "height": 640,
+          "alt": "Torta con crema blanca y detalles de colores de Creaciones Franyelis",
+          "caption": "Ejemplo de diseño de Creaciones Franyelis."
+        }
+      ],
+      "presentations": [],
+      "variants": [],
+      "attributes": [],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "phase3-user-request",
+          "page": null
+        },
+        {
+          "source": "official-instagram-cake-photos",
+          "page": null
+        }
+      ],
+      "seo": {
+        "title": "Tortas personalizadas | Creaciones Franyelis",
+        "description": "Una torta para tu cumpleaños o celebración. Cuéntanos tu idea y cotiza el diseño, tamaño y relleno. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "tortas-personalizadas",
+        "categoryId": "tortas"
+      }
+    },
+    {
+      "id": "pan-de-jamon",
+      "slug": "pan-de-jamon",
+      "categoryId": "panaderia",
+      "subcategoryId": "panes",
+      "name": "Pan de Jamón",
+      "description": "Pan de Jamón artesanal de Creaciones Franyelis. Consulta presentación, precio y disponibilidad.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [
+        {
+          "id": "pan-artesanal",
+          "base": "pan-de-jamon-artesanal",
+          "max": 900,
+          "width": 900,
+          "height": 1200,
+          "alt": "Panes de jamón artesanales de Creaciones Franyelis sobre una rejilla",
+          "caption": "Pan de Jamón preparado por Creaciones Franyelis."
+        },
+        {
+          "id": "pan-detalle",
+          "base": "pan-de-jamon-detalle",
+          "max": 900,
+          "width": 900,
+          "height": 1200,
+          "alt": "Detalle del relleno y el acabado de un Pan de Jamón de Creaciones Franyelis",
+          "caption": "Detalle de nuestra preparación artesanal."
+        }
+      ],
+      "presentations": [],
+      "variants": [],
+      "attributes": [],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "phase3-user-request",
+          "page": null
+        },
+        {
+          "source": "authorized-pan-photos",
+          "page": null
+        }
+      ],
+      "seo": {
+        "title": "Pan de Jamón | Creaciones Franyelis",
+        "description": "Pan de Jamón artesanal de Creaciones Franyelis. Consulta presentación, precio y disponibilidad. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "pan-de-jamon",
+        "categoryId": "panaderia"
+      }
+    },
+    {
+      "id": "nata-venezolana",
+      "slug": "nata-venezolana",
+      "categoryId": "comida-venezolana",
+      "subcategoryId": "complementos",
+      "name": "Nata venezolana",
+      "description": "Nata venezolana para acompañar tu mesa. Consulta las presentaciones de 250 g y 400 g.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "250-g",
+          "label": "250 g",
+          "confirmation": "catalog_reference",
+          "weightGrams": 250
+        },
+        {
+          "id": "400-g",
+          "label": "400 g",
+          "confirmation": "catalog_reference",
+          "weightGrams": 400
+        }
+      ],
+      "variants": [],
+      "attributes": [],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 13
+        }
+      ],
+      "seo": {
+        "title": "Nata venezolana | Creaciones Franyelis",
+        "description": "Nata venezolana para acompañar tu mesa. Consulta las presentaciones de 250 g y 400 g. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "nata-venezolana",
+        "categoryId": "comida-venezolana"
+      }
+    },
+    {
+      "id": "hallacas",
+      "slug": "hallacas",
+      "categoryId": "comida-venezolana",
+      "subcategoryId": "tradicionales",
+      "name": "Hallacas",
+      "description": "Hallacas: consulta los detalles y disponibilidad con Creaciones Franyelis.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [],
+      "variants": [],
+      "attributes": [],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "phase3-user-request",
+          "page": null
+        }
+      ],
+      "seo": {
+        "title": "Hallacas | Creaciones Franyelis",
+        "description": "Hallacas: consulta los detalles y disponibilidad con Creaciones Franyelis. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "hallacas",
+        "categoryId": "comida-venezolana"
+      }
+    },
+    {
+      "id": "bollitos",
+      "slug": "bollitos",
+      "categoryId": "comida-venezolana",
+      "subcategoryId": "tradicionales",
+      "name": "Bollitos",
+      "description": "Bollitos: consulta los detalles y disponibilidad con Creaciones Franyelis.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [],
+      "variants": [],
+      "attributes": [],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "phase3-user-request",
+          "page": null
+        }
+      ],
+      "seo": {
+        "title": "Bollitos | Creaciones Franyelis",
+        "description": "Bollitos: consulta los detalles y disponibilidad con Creaciones Franyelis. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "bollitos",
+        "categoryId": "comida-venezolana"
+      }
+    },
+    {
+      "id": "tequenos-de-queso",
+      "slug": "tequenos-de-queso",
+      "categoryId": "pasapalos",
+      "subcategoryId": "tequenos",
+      "name": "Tequeños de queso",
+      "description": "Tequeños de queso para compartir. Consulta la presentación de 12 o 20 unidades.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "12-unidades",
+          "label": "Bandeja de 12 unidades",
+          "units": 12,
+          "confirmation": "catalog_reference",
+          "sizeCm": 9
+        },
+        {
+          "id": "20-unidades",
+          "label": "Bandeja de 20 unidades",
+          "units": 20,
+          "confirmation": "catalog_reference",
+          "sizeCm": 9
+        }
+      ],
+      "variants": [],
+      "attributes": [
+        {
+          "label": "Relleno",
+          "value": "Queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Preparación",
+          "value": "Crudos",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 2
+        }
+      ],
+      "seo": {
+        "title": "Tequeños de queso | Creaciones Franyelis",
+        "description": "Tequeños de queso para compartir. Consulta la presentación de 12 o 20 unidades. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "tequenos-de-queso",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "tequenos-xl",
+      "slug": "tequenos-xl",
+      "categoryId": "pasapalos",
+      "subcategoryId": "tequenos",
+      "name": "Tequeños XL",
+      "description": "Tequeños XL de 18 cm. Consulta la presentación de 10 unidades.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "10-unidades",
+          "label": "Bandeja de 10 unidades",
+          "units": 10,
+          "confirmation": "catalog_reference",
+          "sizeCm": 18
+        }
+      ],
+      "variants": [],
+      "attributes": [
+        {
+          "label": "Preparación",
+          "value": "Crudos",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 3
+        }
+      ],
+      "seo": {
+        "title": "Tequeños XL | Creaciones Franyelis",
+        "description": "Tequeños XL de 18 cm. Consulta la presentación de 10 unidades. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "tequenos-xl",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "tequenos-premium",
+      "slug": "tequenos-premium",
+      "categoryId": "pasapalos",
+      "subcategoryId": "tequenos",
+      "name": "Tequeños premium",
+      "description": "Tequeños de masa dulce. Consulta la presentación de 10 unidades, congelados y empacados al vacío.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "10-unidades",
+          "label": "Bandeja de 10 unidades",
+          "units": 10,
+          "confirmation": "catalog_reference",
+          "sizeCm": 9
+        }
+      ],
+      "variants": [],
+      "attributes": [
+        {
+          "label": "Masa",
+          "value": "Masa dulce",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Preparación",
+          "value": "Crudos",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Conservación",
+          "value": "Congelados",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Presentación",
+          "value": "Empacados al vacío",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 3
+        }
+      ],
+      "seo": {
+        "title": "Tequeños premium | Creaciones Franyelis",
+        "description": "Tequeños de masa dulce. Consulta la presentación de 10 unidades, congelados y empacados al vacío. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "tequenos-premium",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "tequenos-rellenos",
+      "slug": "tequenos-rellenos",
+      "categoryId": "pasapalos",
+      "subcategoryId": "tequenos",
+      "name": "Tequeños rellenos",
+      "description": "Tequeños de jamón y queso o de queso y guayaba. Elige el relleno que quieres consultar.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "10-unidades",
+          "label": "Bandeja de 10 unidades",
+          "units": 10,
+          "confirmation": "catalog_reference",
+          "sizeCm": 9
+        }
+      ],
+      "variants": [
+        {
+          "id": "jamon-queso",
+          "label": "Jamón y queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "queso-guayaba",
+          "label": "Queso y guayaba",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "Preparación",
+          "value": "Crudos",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 3
+        },
+        {
+          "source": "catalog-pdf",
+          "page": 4
+        }
+      ],
+      "seo": {
+        "title": "Tequeños rellenos | Creaciones Franyelis",
+        "description": "Tequeños de jamón y queso o de queso y guayaba. Elige el relleno que quieres consultar. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "tequenos-rellenos",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "tequeyoyo",
+      "slug": "tequeyoyo",
+      "categoryId": "pasapalos",
+      "subcategoryId": "tequenos",
+      "name": "Tequeyoyo",
+      "description": "Tequeyoyo de 9 cm. Consulta la presentación de 10 unidades.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "10-unidades",
+          "label": "Bandeja de 10 unidades",
+          "units": 10,
+          "confirmation": "catalog_reference",
+          "sizeCm": 9
+        }
+      ],
+      "variants": [],
+      "attributes": [
+        {
+          "label": "Preparación",
+          "value": "Crudos",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 4
+        }
+      ],
+      "seo": {
+        "title": "Tequeyoyo | Creaciones Franyelis",
+        "description": "Tequeyoyo de 9 cm. Consulta la presentación de 10 unidades. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "tequeyoyo",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "pastelitos",
+      "slug": "pastelitos",
+      "categoryId": "pasapalos",
+      "subcategoryId": "pastelitos",
+      "name": "Pastelitos",
+      "description": "Pastelitos de 9 cm con distintos rellenos para consultar, en bandeja de 10 unidades.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "10-unidades",
+          "label": "Bandeja de 10 unidades",
+          "units": 10,
+          "confirmation": "catalog_reference",
+          "sizeCm": 9
+        }
+      ],
+      "variants": [
+        {
+          "id": "pure",
+          "label": "Puré",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pizza",
+          "label": "Pizza",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "queso",
+          "label": "Queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "carne-molida",
+          "label": "Carne molida",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "jamon-queso",
+          "label": "Jamón y queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "maiz-queso-tocineta",
+          "label": "Maíz, queso y tocineta",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "choriqueso",
+          "label": "Choriqueso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "carne-mechada",
+          "label": "Carne mechada",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pollo",
+          "label": "Pollo",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "Preparación",
+          "value": "Crudos",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 5
+        }
+      ],
+      "seo": {
+        "title": "Pastelitos | Creaciones Franyelis",
+        "description": "Pastelitos de 9 cm con distintos rellenos para consultar, en bandeja de 10 unidades. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "pastelitos",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "empanadas-de-maiz",
+      "slug": "empanadas-de-maiz",
+      "categoryId": "pasapalos",
+      "subcategoryId": "empanadas",
+      "name": "Empanadas de maíz",
+      "description": "Empanadas estilo venezolano de harina de maíz. Consulta los rellenos y la bandeja de 10 unidades.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "10-unidades",
+          "label": "Bandeja de 10 unidades",
+          "units": 10,
+          "confirmation": "catalog_reference",
+          "sizeCm": 13
+        }
+      ],
+      "variants": [
+        {
+          "id": "pure-jamon",
+          "label": "Puré con jamón",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "jamon-queso",
+          "label": "Jamón y queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "maiz-queso-tocineta",
+          "label": "Maíz, queso y tocineta",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "carne-mechada",
+          "label": "Carne mechada",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pollo",
+          "label": "Pollo",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "Masa",
+          "value": "Harina de maíz",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Preparación",
+          "value": "Crudas",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 6
+        }
+      ],
+      "seo": {
+        "title": "Empanadas de maíz | Creaciones Franyelis",
+        "description": "Empanadas estilo venezolano de harina de maíz. Consulta los rellenos y la bandeja de 10 unidades. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "empanadas-de-maiz",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "empanadas-de-trigo",
+      "slug": "empanadas-de-trigo",
+      "categoryId": "pasapalos",
+      "subcategoryId": "empanadas",
+      "name": "Empanadas de trigo",
+      "description": "Empanadas de harina de trigo. Elige un relleno y consulta la bandeja de 10 unidades.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "10-unidades",
+          "label": "Bandeja de 10 unidades",
+          "units": 10,
+          "confirmation": "catalog_reference",
+          "sizeCm": 13
+        }
+      ],
+      "variants": [
+        {
+          "id": "napolitana",
+          "label": "Napolitana",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "queso-gauda",
+          "label": "Queso gauda",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "jamon-queso",
+          "label": "Jamón y queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "maiz-queso-tocineta",
+          "label": "Maíz, queso y tocineta",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "carne-mechada",
+          "label": "Carne mechada",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pollo",
+          "label": "Pollo",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "Masa",
+          "value": "Harina de trigo",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Preparación",
+          "value": "Crudas",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 7
+        }
+      ],
+      "seo": {
+        "title": "Empanadas de trigo | Creaciones Franyelis",
+        "description": "Empanadas de harina de trigo. Elige un relleno y consulta la bandeja de 10 unidades. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "empanadas-de-trigo",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "mandocas",
+      "slug": "mandocas",
+      "categoryId": "pasapalos",
+      "subcategoryId": "mandocas",
+      "name": "Mandocas",
+      "description": "Mandocas en presentación de 10 unidades, empacadas al vacío. Consulta su disponibilidad.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "10-unidades",
+          "label": "10 unidades",
+          "units": 10,
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "variants": [],
+      "attributes": [
+        {
+          "label": "Presentación",
+          "value": "Empacadas al vacío",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Preparación",
+          "value": "Crudas",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 8
+        }
+      ],
+      "seo": {
+        "title": "Mandocas | Creaciones Franyelis",
+        "description": "Mandocas en presentación de 10 unidades, empacadas al vacío. Consulta su disponibilidad. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "mandocas",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "papitas-de-yuca",
+      "slug": "papitas-de-yuca",
+      "categoryId": "pasapalos",
+      "subcategoryId": "papitas-de-yuca",
+      "name": "Papitas de yuca",
+      "description": "Papitas de yuca en presentación de 10 unidades, empacadas al vacío. Consulta su disponibilidad.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "10-unidades",
+          "label": "10 unidades",
+          "units": 10,
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "variants": [],
+      "attributes": [
+        {
+          "label": "Presentación",
+          "value": "Empacadas al vacío",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Preparación",
+          "value": "Crudas",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 8
+        }
+      ],
+      "seo": {
+        "title": "Papitas de yuca | Creaciones Franyelis",
+        "description": "Papitas de yuca en presentación de 10 unidades, empacadas al vacío. Consulta su disponibilidad. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "papitas-de-yuca",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "tequenos-coctel",
+      "slug": "tequenos-coctel",
+      "categoryId": "pasapalos",
+      "subcategoryId": "bandejas",
+      "name": "Tequeños de fiesta o cóctel",
+      "description": "Tequeños de queso de 4,5 cm para tus encuentros. Consulta cantidades desde 50 unidades.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "50-unidades",
+          "label": "50 unidades",
+          "units": 50,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "100-unidades",
+          "label": "100 unidades",
+          "units": 100,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "150-unidades",
+          "label": "150 unidades",
+          "units": 150,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "200-unidades",
+          "label": "200 unidades",
+          "units": 200,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "250-unidades",
+          "label": "250 unidades",
+          "units": 250,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "300-unidades",
+          "label": "300 unidades",
+          "units": 300,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "350-unidades",
+          "label": "350 unidades",
+          "units": 350,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "400-unidades",
+          "label": "400 unidades",
+          "units": 400,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        }
+      ],
+      "variants": [],
+      "attributes": [
+        {
+          "label": "Relleno",
+          "value": "Queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Preparación",
+          "value": "Crudos",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Cantidad mínima de referencia",
+          "value": "50 unidades",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 9
+        }
+      ],
+      "seo": {
+        "title": "Tequeños de fiesta o cóctel | Creaciones Franyelis",
+        "description": "Tequeños de queso de 4,5 cm para tus encuentros. Consulta cantidades desde 50 unidades. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "tequenos-coctel",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "pastelitos-coctel",
+      "slug": "pastelitos-coctel",
+      "categoryId": "pasapalos",
+      "subcategoryId": "bandejas",
+      "name": "Pastelitos de fiesta o cóctel",
+      "description": "Pastelitos de 4,5 cm para compartir. Consulta rellenos y cantidades desde 50 unidades.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "50-unidades",
+          "label": "50 unidades",
+          "units": 50,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "100-unidades",
+          "label": "100 unidades",
+          "units": 100,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "150-unidades",
+          "label": "150 unidades",
+          "units": 150,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "200-unidades",
+          "label": "200 unidades",
+          "units": 200,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "250-unidades",
+          "label": "250 unidades",
+          "units": 250,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "300-unidades",
+          "label": "300 unidades",
+          "units": 300,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "350-unidades",
+          "label": "350 unidades",
+          "units": 350,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        },
+        {
+          "id": "400-unidades",
+          "label": "400 unidades",
+          "units": 400,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        }
+      ],
+      "variants": [
+        {
+          "id": "queso",
+          "label": "Queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "jamon-queso",
+          "label": "Jamón y queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pollo",
+          "label": "Pollo",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "carne-molida",
+          "label": "Carne molida",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "choriqueso",
+          "label": "Choriqueso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "maiz-queso-tocineta",
+          "label": "Maíz, queso y tocineta",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pure",
+          "label": "Puré",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pizza",
+          "label": "Pizza",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "Preparación",
+          "value": "Crudos",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Cantidad mínima de referencia",
+          "value": "50 unidades",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Selección de rellenos de referencia",
+          "value": "50 unidades",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 10
+        }
+      ],
+      "seo": {
+        "title": "Pastelitos de fiesta o cóctel | Creaciones Franyelis",
+        "description": "Pastelitos de 4,5 cm para compartir. Consulta rellenos y cantidades desde 50 unidades. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "pastelitos-coctel",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "mix-pastelitos-tequenos",
+      "slug": "mix-pastelitos-tequenos",
+      "categoryId": "pasapalos",
+      "subcategoryId": "bandejas",
+      "name": "Mix de pastelitos y tequeños",
+      "description": "Un mix de 100 unidades: 50 tequeños de queso y 50 pastelitos de cóctel. Consulta el relleno que prefieres.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "100-unidades",
+          "label": "100 unidades: 50 tequeños + 50 pastelitos",
+          "units": 100,
+          "confirmation": "catalog_reference",
+          "sizeCm": 4.5
+        }
+      ],
+      "variants": [
+        {
+          "id": "queso",
+          "label": "Pastelitos de queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "jamon-queso",
+          "label": "Pastelitos de jamón y queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pollo",
+          "label": "Pastelitos de pollo",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "carne-molida",
+          "label": "Pastelitos de carne molida",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "choriqueso",
+          "label": "Pastelitos de choriqueso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "maiz-queso-tocineta",
+          "label": "Pastelitos de maíz, queso y tocineta",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pure",
+          "label": "Pastelitos de puré",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pizza",
+          "label": "Pastelitos de pizza",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "Preparación",
+          "value": "Crudos",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "label": "Selección de rellenos de referencia",
+          "value": "50 unidades",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 11
+        }
+      ],
+      "seo": {
+        "title": "Mix de pastelitos y tequeños | Creaciones Franyelis",
+        "description": "Un mix de 100 unidades: 50 tequeños de queso y 50 pastelitos de cóctel. Consulta el relleno que prefieres. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "mix-pastelitos-tequenos",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "pasapalos-fritos",
+      "slug": "pasapalos-fritos",
+      "categoryId": "pasapalos",
+      "subcategoryId": "bandejas",
+      "name": "Bandeja de pasapalos fritos",
+      "description": "Una combinación de 100 pasapalos fritos entre tequeños y pastelitos. Consulta las opciones para tu encuentro.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [
+        {
+          "id": "100-unidades",
+          "label": "100 pasapalos fritos",
+          "units": 100,
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "variants": [
+        {
+          "id": "queso",
+          "label": "Pastelitos de queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "jamon-queso",
+          "label": "Pastelitos de jamón y queso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pollo",
+          "label": "Pastelitos de pollo",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "carne-molida",
+          "label": "Pastelitos de carne molida",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "choriqueso",
+          "label": "Pastelitos de choriqueso",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "maiz-queso-tocineta",
+          "label": "Pastelitos de maíz, queso y tocineta",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pure",
+          "label": "Pastelitos de puré",
+          "confirmation": "catalog_reference"
+        },
+        {
+          "id": "pizza",
+          "label": "Pastelitos de pizza",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "Preparación",
+          "value": "Fritos",
+          "confirmation": "catalog_reference"
+        }
+      ],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "catalog-pdf",
+          "page": 12
+        }
+      ],
+      "seo": {
+        "title": "Bandeja de pasapalos fritos | Creaciones Franyelis",
+        "description": "Una combinación de 100 pasapalos fritos entre tequeños y pastelitos. Consulta las opciones para tu encuentro. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "pasapalos-fritos",
+        "categoryId": "pasapalos"
+      }
+    },
+    {
+      "id": "ponche-crema",
+      "slug": "ponche-crema",
+      "categoryId": "bebidas",
+      "subcategoryId": "artesanales",
+      "name": "Ponche Crema",
+      "description": "Ponche Crema: consulta presentación, precio y disponibilidad.",
+      "publication": {
+        "status": "local_review"
+      },
+      "price": {
+        "status": "pending_confirmation",
+        "amount": null,
+        "currency": "CLP"
+      },
+      "availability": {
+        "status": "pending_confirmation"
+      },
+      "images": [],
+      "presentations": [],
+      "variants": [],
+      "attributes": [],
+      "ordering": {
+        "channel": "whatsapp",
+        "confirmation": "Precio, disponibilidad y condiciones se acuerdan por WhatsApp antes de confirmar el pedido."
+      },
+      "delivery": {
+        "status": "pending_confirmation",
+        "description": "Consulta las opciones de entrega o retiro antes de confirmar tu pedido."
+      },
+      "faq": [],
+      "evidence": [
+        {
+          "source": "phase3-user-request",
+          "page": null
+        }
+      ],
+      "seo": {
+        "title": "Ponche Crema | Creaciones Franyelis",
+        "description": "Ponche Crema: consulta presentación, precio y disponibilidad. Consulta precio y disponibilidad con Creaciones Franyelis."
+      },
+      "measurement": {
+        "productId": "ponche-crema",
+        "categoryId": "bebidas"
+      }
+    }
+  ]
+}

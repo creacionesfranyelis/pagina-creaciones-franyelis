@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "name": "Creaciones Franyelis",
+    "tagline": "Repostería con amor",
+    "legalName": "Almerida Shop SpA",
+    "whatsapp": "56933193773",
+    "email": "info@creacionesfranyelis.com",
+    "instagram": "https://www.instagram.com/creacionesfrangelis/",
+    "facebook": "https://www.facebook.com/creacionesfranyelis"
+  },
+  "person": {
+    "name": "Franyelis Almerida",
+    "role": "Instructora de Creaciones Franyelis",
+    "presentation": "Conoce a Franyelis Almerida, quien te acompaña paso a paso en nuestras preparaciones navideñas. Aprende técnicas, descubre los detalles de cada receta y disfruta una experiencia práctica preparada con dedicación y cariño."
+  },
+  "history": { "status": "pending_editorial_approval", "text": "" },
+  "categories": [
+    { "id": "tortas", "name": "Tortas y Repostería", "description": "Tortas personalizadas para tus celebraciones.", "image": "torta-rosada-instagram", "imageMax": 640, "imageAlt": "Torta con decoración de crema blanca y rosada publicada por Creaciones Franyelis", "icon": "cake", "plannedPath": "/productos/tortas/", "cta": "Cotizar torta", "message": "Hola, quiero cotizar una torta personalizada con Creaciones Franyelis. ¿Me comparten las opciones y los pasos para hacer mi pedido?" },
+    { "id": "panaderia", "name": "Panadería Artesanal", "description": "Pan de Jamón, un clásico para compartir.", "image": "pan-de-jamon-artesanal", "imageMax": 900, "imageAlt": "Panes de jamón artesanales preparados por Creaciones Franyelis", "icon": "bread", "plannedPath": "/productos/panaderia/", "cta": "Consultar panes", "message": "Hola, quiero consultar por Pan de Jamón de Creaciones Franyelis. ¿Me comparten formatos, disponibilidad y pasos para hacer mi pedido?" },
+    { "id": "comida-venezolana", "name": "Comida Tradicional Venezolana", "description": "Hallacas, bollitos y sabores de nuestra tierra.", "image": null, "icon": "leaf", "plannedPath": "/productos/comida-venezolana/", "cta": "Consultar opciones", "message": "Hola, quiero consultar por hallacas y bollitos de Creaciones Franyelis. ¿Me comparten las opciones y disponibilidad?" },
+    { "id": "pasapalos", "name": "Pasapalos y Catering", "description": "Tequeños, pastelitos y bocados para compartir.", "image": null, "icon": "snacks", "plannedPath": "/productos/pasapalos/", "cta": "Cotizar pasapalos", "message": "Hola, quiero cotizar pasapalos de Creaciones Franyelis. ¿Me comparten las presentaciones y opciones para mi evento?" },
+    { "id": "bebidas", "name": "Bebidas Artesanales", "description": "Ponche Crema para acompañar tus momentos.", "image": null, "icon": "bottle", "plannedPath": "/productos/bebidas/", "cta": "Consultar bebidas", "message": "Hola, quiero consultar por Ponche Crema de Creaciones Franyelis. ¿Me comparten formatos y disponibilidad?" }
+  ],
+  "course": {
+    "id": "rey-navidad-oct2026",
+    "name": "El Rey de la Navidad",
+    "subject": "Pan de Jamón",
+    "bonus": "Ponche Crema",
+    "url": "/",
+    "date": "2026-10-25",
+    "startDate": "2026-10-25T10:00:00-03:00",
+    "endDate": "2026-10-25T14:00:00-03:00",
+    "timeZone": "America/Santiago",
+    "duration": "PT4H",
+    "normalPrice": 80000,
+    "promoPrice": 50000,
+    "deposit": 20000,
+    "balance": 30000,
+    "promotionUntil": "2026-10-18",
+    "ebook": "De tu cocina a tu negocio",
+    "workshopAddress": "Toro Mazote 76, Estación Central"
+  }
+}
