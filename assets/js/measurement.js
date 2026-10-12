@@ -11,7 +11,7 @@
     ['utm_source', 'campaign_source', 16, ['fb', 'facebook', 'ig', 'instagram']],
     ['utm_medium', 'campaign_medium', 16, ['paid_social']],
     ['utm_campaign', 'campaign_name', 64, ['rey_navidad_oct2026']],
-    ['utm_content', 'campaign_content', 64, ['anuncio_1_foto']]
+    ['utm_content', 'campaign_content', 64, ['anuncio_1_foto', 'Anuncio 2 Foto 50mil CLP', 'Anuncio 3 Foto 50mil CLP']]
   ];
   const config = window.FranyelisMeasurementConfig || {};
   const ga4 = config.ga4 || {}, ads = config.ads || {};
@@ -59,7 +59,7 @@
         if (!values.length && parameter === 'utm_content') continue;
         if (values.length !== 1) return {};
         const value = values[0];
-        if (!value || value.length > limit || !/^[a-z][a-z0-9_-]*$/.test(value) || !approved.includes(value)) return {};
+        if (!value || value.length > limit || !(parameter === 'utm_content' ? /^[A-Za-z0-9 _-]+$/.test(value) : /^[a-z][a-z0-9_-]*$/.test(value)) || !approved.includes(value)) return {};
         campaign[field] = value;
       }
       return campaign;
