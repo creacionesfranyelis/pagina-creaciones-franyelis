@@ -1,39 +1,69 @@
-CREACIONES FRANYELIS — ACTUALIZACIÓN CONTROLADA DE OFERTA Y EDICIÓN
+CREACIONES FRANYELIS — NUEVA JORNADA Y DISPONIBILIDAD REAL
+Actualización de referencia: 13 de octubre de 2026.
 
-Estado: preparado, pendiente de ejecución y autorización de publicación.
+Estado: preparación local, pendiente de revisión y autorización de publicación.
 Zona horaria: America/Santiago. Responsable operativo: pendiente de asignación por Almerida Shop SpA.
-Este documento no instala automatizaciones, contadores ni tareas programadas. No modifica Production. El responsable deberá preparar cada actualización con anticipación y obtener autorización para publicarla a tiempo.
+Este documento no instala automatizaciones ni modifica Production, las campañas o la configuración de los proveedores de medición.
 
-1. RETIRADA DE LA PROMOCIÓN
+1. JORNADA ABIERTA DEL SÁBADO 24 DE OCTUBRE
 
-La promoción de $50.000 CLP termina el 18 de octubre de 2026. Desde el 19 de octubre de 2026 a las 00:00, hora de Santiago, no debe presentarse como vigente. Ese límite equivale al 19 de octubre a las 03:00 UTC.
+Curso: Pan de Jamón venezolano.
+Fecha: sábado 24 de octubre de 2026.
+Horario: 10:00 a 16:00, America/Santiago; 6 horas presenciales.
+Lugar: Toro Mazote 76, Estación Central, Región Metropolitana, Chile.
+Capacidad máxima: 15 participantes.
+Precio total aprobado: $50.000 CLP. Abono: $20.000 CLP. Saldo: $30.000 CLP por transferencia el día del taller, antes de comenzar.
+Bonos: Ponche Crema incluido durante la misma jornada y ebook DE TU COCINA A TU NEGOCIO gratis para los participantes inscritos.
 
-Antes de ese límite, preparar y revisar un cambio manual en una rama de trabajo. Revisar de forma conjunta el hero, la sección de oferta, el resumen de precios, las FAQ, las tarjetas de ahorro, los CTA, el botón flotante, el mensaje de WhatsApp y los Términos y Condiciones. Retirar las afirmaciones de promoción vigente, el ahorro de $30.000 y el saldo promocional de $30.000 cuando se comuniquen como condiciones para una nueva reserva. Conservar las condiciones pactadas para las reservas ya confirmadas; no modificar retroactivamente su precio ni su saldo.
+La nueva oferta de $50.000 no se presenta como un descuento desde $80.000 ni queda sometida al plazo promocional previo del 18 de octubre. El ebook de la nueva jornada tampoco depende de ese plazo. No cambiar automáticamente el precio o retirar el ebook el 19 de octubre por aplicar la regla de una campaña anterior.
 
-No inventar otro precio, descuento, saldo, plazo o condición de reserva. El precio normal de $80.000 CLP ya está confirmado, pero cualquier presentación comercial posterior a la promoción y sus condiciones de contratación deberá revisarse y aprobarse expresamente. Si no existe una oferta posterior aprobada, usar una invitación a consultar disponibilidad e información, sin prometer el precio promocional ni confirmar reservas automáticamente.
+La empresa confirma la inscripción únicamente cuando verifica la recepción del abono y envía confirmación expresa por el WhatsApp oficial. Abrir un enlace, enviar una consulta o presentar un comprobante sin verificar no confirma un cupo ni representa una compra.
 
-La imagen social local está pendiente de autorización para corregir el precio normal anterior y añadir la duración: debe comunicar $80.000 CLP de precio normal y 4 horas, conservando el precio promocional de $50.000 y el abono de $20.000. No generar ni sustituir la imagen sin autorización expresa. Retirar la promoción solo en el HTML no resuelve ese anuncio. Preparar un arte sustituto aprobado, actualizar las referencias OG/Twitter y la versión de su URL, comprobar que se sirve públicamente y revisar su vista previa. La imagen aprobada actual se conserva hasta autorizar ese reemplazo. Las plataformas pueden mantener vistas previas anteriores en caché; no garantizar un plazo de renovación ni añadir parámetros al enlace que se comparte.
+El ebook se entrega manualmente y de forma privada en PDF, por un canal acordado, una vez disponible y confirmada la inscripción. No crear descarga pública ni publicar fecha de entrega no aprobada. Es un beneficio distinto de Ponche Crema y no requiere autorización de publicidad ni pago completo como condición de acceso.
 
-Revisar además los textos y valores de los eventos locales relacionados con la oferta, sin cambiar sus nombres ni convertir clics en pagos. Mantener la configuración de GA4, los permisos de consentimiento y Meta Pixel. Los documentos o mensajes que describan reservas anteriores deben identificarlas por su fecha y condiciones, para no anunciar una promoción vencida como actual.
+Mantener las demás condiciones confirmadas, incluidos materiales, cancelación con 72 horas, evaluación individual de cancelaciones tardías, devolución y retracto. Para el 24 con inicio a las 10:00, las 72 horas corresponden al 21 de octubre de 2026 a las 10:00, hora de Santiago. No agregar penalizaciones, exclusiones ni nuevas condiciones jurídicas.
 
-2. CIERRE DE LA EDICIÓN DEL 25 DE OCTUBRE
+2. JORNADA DEL DOMINGO 25 DE OCTUBRE: CUPOS COMPLETOS
 
-La jornada confirmada es el domingo 25 de octubre de 2026, de 10:00 a 14:00, con una duración de 4 horas, hora de Santiago, en Toro Mazote 76, Estación Central. Al finalizar la jornada, revisar y publicar, con autorización, la versión informativa de esa edición realizada. No seguir aceptando reservas para esa edición ni anunciar nuevas fechas sin confirmación.
+La jornada del domingo 25 de octubre de 2026 tiene los cupos completos y no admite nuevas reservas. Mantener ese aviso diferenciado de la nueva fecha. Los CTA de reserva y mensajes precargados de la landing deben identificar exclusivamente el sábado 24 de octubre; los canales generales conservan la atención a participantes del 25.
 
-Sustituir los CTA de reserva, el botón flotante y los mensajes precargados de WhatsApp por consultas generales que no inviten a reservar la edición ya realizada. Mantener los canales oficiales y los contactos necesarios para atender reservas existentes, cancelaciones, devoluciones y otras solicitudes. Cualquier cierre de inscripciones anterior al taller debe ser confirmado por la organización; este plan no inventa un plazo adicional.
+La nueva jornada no reprograma ni altera las reservas existentes del 25. Conservar para cada participante la fecha, el horario, el precio, el saldo, los bonos y las condiciones efectivamente acordados. Las condiciones de la campaña anterior y su límite del 18 de octubre se usan solo para evaluar esos compromisos previos, sin volver a anunciarlos como una oferta abierta del 25 ni aplicarlos al 24.
 
-Conservar la URL canónica https://www.creacionesfranyelis.com/, el programa y las fechas de la edición como historial, con redacción que indique que la jornada ya se realizó. Revisar hero, oferta, FAQ, detalle práctico, redes, imagen social y metadata para que no impliquen una reserva disponible. Preservar el historial SEO sin redirecciones, cambios de dominio ni borrados innecesarios. El JSON-LD debe conservar las fechas reales; no reemplazarlas por futuras fechas ni asignar estados de cancelación o reprogramación que no hayan ocurrido. No anunciar ediciones, precios, disponibilidad o módulos adicionales sin confirmación.
+Conservar el ebook para participantes del 25 elegibles según lo previamente pactado. Para reservas previas del 25 con inicio a las 10:00, el límite ordinario de cancelación de 72 horas sigue siendo el 22 de octubre a las 10:00, hora de Santiago. No imponer un traslado automático al 24.
 
-3. VERIFICACIÓN Y PUBLICACIÓN DE CADA CAMBIO
+3. DISPONIBILIDAD REAL Y ACTUALIZACIÓN MANUAL CONTROLADA
 
-Comprobar coherencia entre página, FAQ, WhatsApp, condiciones, imagen social y datos estructurados; navegación, consentimiento, compartir el enlace limpio, recursos y vista móvil/escritorio. Revisar el cambio de Git, ejecutar git diff --check y probar el Preview. Publicar únicamente tras la autorización correspondiente y confirmar la versión pública después. Registrar el commit, el momento de publicación y la persona responsable, sin guardar datos de participantes ni comprobantes en el repositorio.
+Fuente agregada preparada: content/workshop-availability.json.
+Estado actual informado por el titular el 13 de octubre de 2026: capacity = 15; confirmedReservations = 4; status = manual_verified; verifiedAt = 2026-10-13T07:32:38.000Z. La web calcula 11 cupos restantes y 26,7 % de ocupación desde esa única fuente agregada. La cifra fue confirmada por el titular, no por una revisión autónoma de comprobantes.
+Estado de respaldo sin datos fiables: confirmedReservations = null; status = unverified; verifiedAt = null.
+Mientras no exista un recuento comprobado, mostrar únicamente «15 cupos habilitados». No anunciar 15 cupos restantes ni cero reservas confirmadas: ambos serían datos no verificados. Mantener desactivados el contador y la barra numérica de progreso en ese estado.
 
-Pendientes antes de ejecutar: asignar responsable, aprobar el arte social y el texto comercial posterior a la promoción, confirmar el procedimiento de cierre de inscripciones y autorizar las publicaciones. Este plan está preparado; no se ha ejecutado ninguna actualización futura ni creado una automatización.
+Propuesta de operación manual, pendiente de asignar responsable:
+- Almerida Shop SpA conserva el registro real de inscripciones fuera del repositorio y de las carpetas públicas, con acceso limitado a las personas autorizadas.
+- La persona responsable concilia abonos recibidos y confirmaciones enviadas; deduplica las reservas, separa las dos fechas y aplica cancelaciones o devoluciones antes de determinar el recuento.
+- Actualiza solo los valores agregados de la jornada del 24 en el archivo versionado, siguiendo el esquema y las validaciones de su implementación. No guardar nombres, teléfonos, correos, comprobantes, datos bancarios ni identificadores de participantes.
+- El acceso al repositorio y la autorización de publicación controlan los cambios administrativos. No existe un panel público, formulario o endpoint para modificar reservas.
+- Revisar el diff y la coherencia con capacidad 15; no admitir recuentos negativos, superiores a la capacidad ni valores sin comprobación. El momento de verificación corresponde al recuento real, no a un clic ni a una estimación.
+- Publicar únicamente con autorización; un archivo editado localmente no actualiza Production. Revisar después la disponibilidad pública. Si el recuento deja de ser fiable, desactivar su publicación y volver a «15 cupos habilitados» hasta reconfirmar.
 
-OFERTA ANTICIPADA Y EBOOK (PREPARACIÓN LOCAL)
+La web no sustituye el control de reservas, no bloquea cupos por una consulta y no ofrece actualización en tiempo real. GA4 y Meta no son una fuente de reservas pagadas o confirmadas. La barra, cuando se habilite con datos verificados, representa reservas confirmadas respecto de capacidad máxima, nunca visitantes ni clics de WhatsApp.
 
-assets/js/early-booking.js usa ENABLED=true y fecha límite 2026-10-19T00:00:00-03:00. Para desactivar manualmente promoción y regalo, cambiar ENABLED a false y revisar antes de publicar. La landing muestra consulta de disponibilidad si no se comprueba la vigencia; no cambia automáticamente precios ni saldos. Revisar la hora local del visitante no sustituye la verificación del abono ni la confirmación de la empresa.
+4. COHERENCIA DE CONTENIDOS Y MEDICIÓN
 
-El ebook DE TU COCINA A TU NEGOCIO corresponde a reservas confirmadas con abono de $20.000 CLP hasta el 18 de octubre inclusive. Mantener ese beneficio para participantes elegibles, aunque después se retire el anuncio. Entrega manual y privada en PDF por canal acordado una vez disponible; sin descarga pública, fecha de entrega ni pago total como requisito. Es un beneficio distinto del bonus de Ponche Crema.
+Revisar en conjunto hero, beneficios, detalles prácticos, programa, precio, FAQ, CTA y flotante, WhatsApp, Términos y Condiciones, SEO, OG/Twitter y JSON-LD. Todo contenido de reserva abierta debe identificar el 24 con 10:00–16:00, 6 horas, $50.000 / $20.000 / $30.000 y ambos bonos. El 25 debe quedar señalado como completo, sin CTA de nueva reserva para esa fecha.
 
-Portada: integrada la imagen oficial aportada por el propietario, con título y subtítulo confirmados. Se sirve mediante assets/images/ebook-de-tu-cocina-a-tu-negocio-480.webp y assets/images/ebook-de-tu-cocina-a-tu-negocio-720.webp, optimizadas sin recortar el arte. La presentación de libro usa CSS y no habilita una descarga pública del PDF. El precio impreso de la imagen OG existente requiere el reemplazo manual y aprobado ya descrito arriba; la caducidad del HTML no cambia el arte social.
+No asignar a la nueva jornada un contador regresivo ni una fecha de finalización comercial no confirmada. Mantener la URL compartida limpia https://www.creacionesfranyelis.com, sin parámetros artificiales. Conservar la identidad visual y las fotografías aprobadas.
+
+El arte social existente puede contener precio anterior, plazo o copy de la campaña previa. Auditar esa discrepancia por separado y documentarla; cambiar el HTML o las etiquetas OG no cambia texto impreso dentro del archivo. No generar ni sustituir la imagen sin aprobación específica. Si requiere reemplazo, preparar el arte correcto para revisar antes de publicar, sin prometer cuándo las plataformas renovarán su caché.
+
+Mantener GA4 G-QTSNJPFR93, Meta Pixel 2596910080758723, UTM y consentimiento. No crear ni simular eventos de Purchase o reserva confirmada. La apertura de WhatsApp conserva el evento existente de intención. No usar clics para calcular inventario y no enviar datos de participantes. No cambiar Meta Ads.
+
+5. CIERRE DE LAS JORNADAS Y VERIFICACIÓN
+
+Preparar con anticipación, y publicar solo con autorización, una versión informativa cuando finalice cada jornada. No seguir aceptando reservas para una fecha pasada ni anunciar otra sin confirmación. Retirar los CTA de la jornada finalizada y conservar los contactos para atender a quienes ya están inscritos.
+
+Conservar el historial verdadero de ambas jornadas, sin reescribir fechas pasadas ni asignar estados de cancelación o reprogramación que no hayan ocurrido. Mantener los compromisos de entrega manual del ebook y los derechos de los participantes tras retirar anuncios.
+
+Antes de cualquier publicación: comprobar consistencia de fecha, precio, bonos, disponibilidad, condiciones y datos estructurados; ejecutar git diff --check; revisar móvil, tablet y escritorio, WhatsApp, teclado, consentimiento, eventos existentes, recursos e imagen social. Revisar el Preview únicamente cuando se autorice publicarlo. Registrar el commit y la autorización sin añadir datos personales al repositorio.
+
+Pendientes: asignar responsable operativo de las próximas conciliaciones y mantener actualizado el recuento real del 24; acordar el canal privado de entrega del ebook y confirmar su disponibilidad; revisar cualquier discrepancia del arte social. No es necesario inventar una fecha de entrega o una cantidad vendida para presentar la nueva jornada. Este trabajo permanece local, sin commit, push, merge ni deploy hasta autorización.

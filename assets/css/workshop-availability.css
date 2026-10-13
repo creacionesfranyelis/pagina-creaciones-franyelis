@@ -1,0 +1,23 @@
+#workshop-availability { padding: 20px 0 32px; background: var(--cream, #fffaf5); }
+#workshop-availability [hidden] { display: none !important; }
+.availability-card { padding: clamp(22px, 3vw, 36px); border: 1px solid #f2d5df; border-radius: 24px; background: #fff; box-shadow: 0 8px 26px rgba(75,29,20,.06); }
+.availability-card .kicker { margin: 0 0 13px; }
+.availability-card h2 { margin: 0 0 12px; color: var(--brown, #4b1d14); font-family: Georgia, serif; font-size: clamp(28px, 4vw, 40px); line-height: 1.12; letter-spacing: -.6px; }
+.availability-card > p:not(.kicker) { max-width: 750px; margin: 0; color: #5d433c; }
+.availability-card dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 24px 0 18px; }
+.availability-card dl > div { padding: 14px; border: 1px solid #f2d5df; border-radius: 14px; background: #fffaf5; min-width: 0; }
+.availability-card dt { color: #5d433c; font-size: 13px; line-height: 1.35; }
+.availability-card dd { margin: 7px 0 0; color: var(--brown, #4b1d14); font-size: 28px; font-weight: 800; font-variant-numeric: tabular-nums; }
+[data-availability-progress] { height: 10px; overflow: hidden; border-radius: 999px; background: #ffe2ed; }
+[data-availability-progress] > span { display: block; width: 0; height: 100%; background: var(--pink, #d61b68); border-radius: inherit; }
+.availability-card [data-availability-updated] { margin-top: 13px !important; font-size: 12px; line-height: 1.5; }
+@media (max-width: 480px) {
+  #workshop-availability { padding: 14px 0 24px; }
+  .availability-card { padding: 22px 18px; border-radius: 20px; }
+  .availability-card dl { gap: 8px; }
+  .availability-card dl > div { padding: 12px 8px; }
+  .availability-card dt { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #workshop-availability *, #workshop-availability *::before, #workshop-availability *::after { animation: none !important; transition: none !important; }
+}
