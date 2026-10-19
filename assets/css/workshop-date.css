@@ -1,21 +1,26 @@
-/* Approved 24 October session; keep the course's established visual identity. */
+/* Both October editions are full. Static status stays visible without JavaScript. */
 .workshop-full-notice{background:var(--brown);font-weight:700}
-.workshop-new-date{align-items:baseline;flex-wrap:wrap;color:var(--brown);border-color:#e9c798;background:#fff8e9;font-size:14px}
-.workshop-time{margin:9px 0 0;font-size:15px;color:var(--brown);font-weight:700}
-.workshop-capacity{display:inline-block;margin:13px 0 0;padding:7px 12px;border:1px solid #f0ccd9;border-radius:14px;background:#fff;color:var(--pink);font-size:14px;font-weight:800}
+.workshop-soldout{color:var(--pink);background:#fff;border-color:#edbbce;font-size:15px;letter-spacing:.6px}
+.hero-heading .soldout-thanks{font-size:17px;line-height:1.55}
+.hero-session-status{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:18px 0 0}
+.hero-session-status li{display:grid;gap:3px;flex:1;min-width:140px;padding:10px 14px;border:1px solid #edcfdb;border-radius:15px;background:#fff;font-size:13px;color:var(--brown)}
+.hero-session-status strong{color:var(--pink);font-size:14px}
+.soldout-next{font-size:16px;color:var(--brown);font-weight:700;margin:0}
+.hero-sale .ctas{margin-top:12px}
 .offer-card .reserve-box{margin-top:20px}
-.hero-sale .hero-gift{font-size:13px}
+.offer-card .reserve-box>span{max-width:180px;font-size:13px;line-height:1.4}
 @media(max-width:600px){
- .workshop-new-date{font-size:11px;gap:4px;letter-spacing:.15px}
- .workshop-time{font-size:12px;margin-top:6px}
- .hero-heading h1{font-size:38px;line-height:1.02;margin:9px 0 8px}
- .hero-benefit{font-size:16px;line-height:1.25;margin-bottom:6px}
- .hero-heading .lead{font-size:13px;line-height:1.35}
- .workshop-capacity{font-size:12px;padding:5px 10px;margin-top:8px}
+ .workshop-soldout{font-size:13px;padding:8px 13px}
+ .hero-heading h1{font-size:36px;line-height:1.02;margin:10px 0 11px}
+ .hero-heading .soldout-thanks{font-size:14px;line-height:1.45}
+ .hero-session-status{gap:8px;margin-top:12px}
+ .hero-session-status li{padding:8px 10px;min-width:0;font-size:12px}
+ .hero-session-status strong{font-size:12px}
  .hero-grid>.collage{min-height:190px}
- .hero-sale .hero-gift{font-size:11px}
+ .soldout-next{font-size:14px}
  .hero-sale .btn{font-size:14px;line-height:1.3;padding:12px;gap:8px}
  .hero-sale .ctas{margin-top:10px}
+ .floating-whatsapp__link{font-size:13px}
 }
 @media(min-width:601px) and (max-width:900px){
  .hero-grid>.collage{min-height:260px;width:min(550px,100%)}
