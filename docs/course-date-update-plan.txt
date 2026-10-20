@@ -1,53 +1,72 @@
-CREACIONES FRANYELIS — CIERRE DE INSCRIPCIONES DE AMBAS JORNADAS
+CREACIONES FRANYELIS — NUEVA JORNADA DEL 5 DE NOVIEMBRE
 Actualización de referencia: 19 de octubre de 2026.
 
-Estado: preparación local, pendiente de revisión y autorización de publicación.
+Estado: preparación local, pendiente de auditoría y autorización de publicación.
 Zona horaria: America/Santiago.
-Este documento no instala automatizaciones ni modifica Production, las campañas o la configuración de los proveedores de medición.
+No se instala automatización ni se modifica Production, campañas o configuración de proveedores de medición.
 
-1. ESTADO CONFIRMADO
+1. JORNADA NUEVA CONFIRMADA
 
-La organización confirmó que las jornadas del sábado 24 y del domingo 25 de octubre de 2026 tienen todos sus cupos completos. Ninguna admite nuevas reservas. No hay nuevas fechas autorizadas.
-
-El Hero y el componente de disponibilidad muestran ambos cierres de forma inmediata y accesible. No se anuncian cupos habilitados, cifras parciales de reservas, cupos restantes ni una barra de ocupación. No se infiere una cantidad vendida a partir de la capacidad.
-
-Se retiran el antiguo módulo assets/js/workshop-availability.js, su referencia y content/workshop-availability.json. El cierre queda en el HTML y no depende de JavaScript, una descarga o una actualización automática. No existe un respaldo que reabra inscripciones ni un panel público para modificar reservas.
-
-2. INFORMACIÓN CONSERVADA PARA LAS INSCRIPCIONES EXISTENTES
-
-Curso: Pan de Jamón venezolano.
-Jornada del sábado 24 de octubre de 2026: 10:00 a 16:00, America/Santiago; 6 horas presenciales.
+Curso: Pan de Jamón venezolano, presencial.
+Fecha: jueves 5 de noviembre de 2026.
+Horario: 10:00 a 14:00, America/Santiago; 4 horas.
 Lugar: Toro Mazote 76, Estación Central, Región Metropolitana, Chile.
-Condiciones ya acordadas para el 24: total $50.000 CLP; abono $20.000 CLP, parte del total; saldo $30.000 CLP por transferencia el día del taller antes de comenzar.
+Proveedor y organizador: Almerida Shop SpA. Marca: Creaciones Franyelis.
+Precio total: $65.000 CLP. Abono: $20.000 CLP, parte del total. Saldo: $45.000 CLP.
+Estado: abierto a consultas de reserva, sin capacidad máxima ni cifras de disponibilidad confirmadas.
 
-Las personas inscritas para el domingo 25 mantienen la fecha, el horario, el precio, el saldo, los beneficios y las condiciones efectivamente pactadas para su jornada. El cierre no traslada ni cambia automáticamente reservas.
+Condiciones confirmadas expresamente para noviembre:
+- Saldo de $45.000 CLP por transferencia el mismo 5 de noviembre, antes de comenzar el curso; no se exige pagarlo en un día anterior.
+- Ponche Crema incluido como preparación adicional durante la misma jornada de 4 horas.
+- Todos los ingredientes, materiales y utensilios necesarios para las preparaciones incluidos en los $65.000 CLP.
+- Ebook DE TU COCINA A TU NEGOCIO gratis para todas las personas con inscripción confirmada, sin plazo promocional adicional. Basta el abono de $20.000 CLP verificado y la confirmación expresa de Almerida Shop SpA; no se exige pagar el saldo anticipadamente ni el total para obtener el beneficio. No aplicar el antiguo límite del 18 de octubre.
 
-La descripción del programa, Ponche Crema y el ebook DE TU COCINA A TU NEGOCIO se conserva como antecedente de estas ediciones y de los compromisos ya asumidos, sin prometer contenidos, bonos o precios para fechas futuras. Las promociones anteriores no se reactivan.
+La entrega del ebook se coordina de forma privada con la organización, sin descarga pública ni fecha de entrega inventada. Estas inclusiones y condiciones se confirman para noviembre por decisión expresa de la organización, sin cambiar retroactivamente los acuerdos de octubre.
 
-El ebook se entrega manualmente y de forma privada en PDF, por un canal acordado y una vez disponible, conforme al beneficio ya pactado con el participante. No crear descarga pública, fecha de entrega no aprobada ni una nueva condición de pago para recibirlo.
+Los CTA de la nueva jornada utilizan el WhatsApp oficial +56 9 3319 3773 y el mensaje exacto:
 
-Se mantienen los materiales y derechos confirmados, incluida cancelación con 72 horas, evaluación individual de cancelaciones tardías, devoluciones y retracto. El límite ordinario para el 24 con inicio a las 10:00 es el 21 de octubre de 2026 a las 10:00; para el 25 con inicio a las 10:00 es el 22 de octubre de 2026 a las 10:00, hora de Santiago. No agregar penalizaciones ni exclusiones.
+«Hola, quiero reservar mi cupo para el curso presencial de Pan de Jamón del jueves 5 de noviembre de 2026, de 10:00 a 14:00 horas. Entiendo que el precio total es $65.000 CLP y puedo reservar con un abono de $20.000 CLP. ¿Me indican cómo confirmar mi inscripción?».
 
-3. CONTACTO VOLUNTARIO PARA PRÓXIMOS TALLERES
+Abrir WhatsApp o enviar un mensaje no confirma una reserva ni acredita un pago. La organización debe verificar la recepción del abono y enviar la confirmación expresa por el canal oficial. Antes de contratar y pagar deben facilitarse las condiciones completas en un formato conservable. No habilitar pagos automáticos ni suscripciones publicitarias por defecto.
 
-Los CTA de nueva reserva o pago se sustituyen por «Consultar próximos talleres» y abren únicamente el WhatsApp oficial +56 9 3319 3773 con este mensaje:
+2. JORNADAS DE OCTUBRE AGOTADAS Y ACUERDOS EXISTENTES
 
-«Hola, vi que los cupos del curso de Pan de Jamón están agotados. Me gustaría recibir información cuando abran una nueva fecha».
+Sábado 24 de octubre de 2026: cupos agotados, sin nuevas reservas. Horario acordado 10:00–16:00; 6 horas. Total acordado $50.000 CLP; abono $20.000 CLP; saldo $30.000 CLP por transferencia el día del taller antes de comenzar. Mantener ingredientes, materiales, utensilios, Ponche Crema y ebook ya incluidos en esas inscripciones.
 
-No solicitar un nuevo abono para las jornadas completas. No ofrecer una fecha, precio, bono o cupo futuro no autorizado. Abrir WhatsApp no confirma una reserva, no acredita un pago, no implica aceptar publicidad y no suscribe automáticamente a una base de contactos. El canal oficial conserva la atención a participantes ya inscritos, cancelaciones y devoluciones.
+Domingo 25 de octubre de 2026: cupos agotados, sin nuevas reservas. Conservar para cada participante el horario, precio, saldo, beneficios y condiciones efectivamente pactados. La nueva jornada no traslada ni modifica reservas anteriores ni reactiva promociones vencidas.
 
-4. COHERENCIA Y MEDICIÓN
+La descripción del programa y las fotografías del Pan de Jamón se mantienen. Los beneficios y materiales de octubre se identifican como antecedentes de esas ediciones; las inclusiones de noviembre se comunican por su propia confirmación expresa indicada arriba. El ebook de octubre conserva la entrega manual y privada por un canal convenido, una vez disponible, sin enlace público ni fecha inventada.
 
-Revisar Hero, disponibilidad, detalles, programa, antecedentes comerciales, FAQ, CTA, flotante, WhatsApp, Términos y Condiciones, SEO, OG/Twitter y JSON-LD. Ambas fechas deben constar completas, sin eventos ficticios ni una cancelación o reprogramación que no ha ocurrido. Mantener la URL canónica y el sitemap existentes.
+3. CANCELACIONES, DEVOLUCIONES Y RETRACTO
 
-Conservar fotografías, identidad visual, instructora, mapa, enlaces sociales y la URL compartida limpia https://www.creacionesfranyelis.com. Cambiar metadatos no altera el texto impreso en imágenes históricas ni garantiza la renovación inmediata de cachés sociales.
+Se conserva la política comercial vigente: devolución del 100 % del abono de $20.000 CLP si se comunica la cancelación con al menos 72 horas de anticipación; evaluación individual de cancelación tardía o inasistencia, sin penalización o pérdida automática; devolución por transferencia en un máximo de 5 días hábiles después de recibir y validar una solicitud procedente, sin limitar derechos ni plazos legales.
 
-Mantener GA4 G-QTSNJPFR93, Meta Pixel 2596910080758723, Consent Mode v2 y UTM. La apertura de WhatsApp conserva el evento existente de intención de contacto; no crear ni simular Purchase, pago o reserva confirmada. No usar analítica como inventario. No cambiar Meta Ads.
+Límites ordinarios, America/Santiago:
+- 5 de noviembre con inicio a las 10:00: 2 de noviembre de 2026 a las 10:00.
+- 24 de octubre con inicio a las 10:00: 21 de octubre de 2026 a las 10:00.
+- 25 de octubre con inicio a las 10:00: 22 de octubre de 2026 a las 10:00.
 
-5. CONTROL DE REAPERTURA Y VALIDACIÓN
+La regla de 72 horas es comercial y no sustituye ni acorta el retracto legal. No se excluye el retracto: conservar los derechos de contratación a distancia, confirmación contractual escrita y devolución ya descritos. No imponer una nueva fecha si la empresa cancela o reprograma; conservar la elección del participante y sus derechos. La revisión técnica no sustituye una revisión jurídica ni declara definitivos los documentos.
 
-Cualquier nueva fecha o reapertura requiere autorización expresa. Las cancelaciones o cambios en registros privados no reabren automáticamente la landing. El acceso autorizado al repositorio, la revisión y la aprobación de publicación controlan futuras ediciones; no se crea un panel ni endpoint administrativo público.
+Referencias oficiales consultadas para contrastar los derechos existentes:
+- SERNAC, explicación del retracto: https://www.sernac.cl/portal/617/w3-article-57413.html
+- SERNAC, derechos de comercio electrónico: https://www.sernac.cl/portal/604/w3-propertyvalue-20982.html
+- SERNAC, interpretación del retracto y sus plazos: https://www.sernac.cl/portal/618/articles-84009_archivo_01.pdf
 
-Antes de publicar, comprobar ambas fechas completas, ausencia de CTA de reserva o pago, mensaje de WhatsApp, contexto histórico de precios y bonos, consistencia del JSON-LD, teclado, consentimiento, eventos, imágenes y ausencia de errores u overflow en móvil, tablet y escritorio. Ejecutar git diff --check y revisar todos los archivos modificados.
+4. PRESENTACIÓN, DISPONIBILIDAD Y SEO
 
-Pendientes operativos: mantener la atención y los derechos de las inscripciones existentes; acordar el canal privado de entrega del ebook y confirmar su disponibilidad sin inventar fechas. No hay ninguna nueva jornada aprobada. Estos cambios permanecen locales, sin commit, push, merge ni despliegue hasta autorización.
+Priorizar en Hero y CTA la nueva fecha, 10:00–14:00, 4 horas, total $65.000, abono $20.000 y saldo $45.000. Mostrar el historial del 24 y 25 agotados en una sección secundaria. No inventar capacidad, reservas, ventas, testimonios, contadores ni urgencia artificial.
+
+No se restablecen assets/js/workshop-availability.js ni content/workshop-availability.json. El estado estático no depende de una descarga ni se convierte automáticamente en inventario. No crear un panel público de edición.
+
+Revisar programa, FAQ, precios, botones y flotante, WhatsApp, Términos y Condiciones, meta title y description, OG/Twitter, JSON-LD Course/EducationEvent, fechas y ofertas. Los eventos de octubre siguen agotados; noviembre abierto a consultas sin cantidad inventada. Mantener canonicals, sitemap, identidad, fotografías, instructora, mapa, redes y URL compartida limpia.
+
+La imagen curso-navideno-social.jpg anuncia cupos agotados: no reutilizarla como preview de la nueva jornada abierta. Usar una fotografía real aprobada coherente o dejar identificado el arte pendiente de aprobación. No prometer renovación inmediata de las cachés sociales.
+
+5. CONSENTIMIENTO, MEDICIÓN Y CONTROL
+
+Conservar GA4 G-QTSNJPFR93, Meta Pixel 2596910080758723, Consent Mode v2 y UTM. Un clic a WhatsApp es intención, no compra ni reserva confirmada. No emitir Purchase ni valores de ventas a partir de clics. Respetar consentimiento de analítica y marketing; no cambiar Meta Ads.
+
+Toda publicación requiere autorización. Preparar cambios en la rama aislada desde el último origin/main, sin alterar la rama corporativa ni otros trabajos. Ejecutar git diff --check; comprobar móviles, tablet, escritorio, teclado, fechas, horario, precios, mensajes, JSON-LD, fotografías, consentimiento y ausencia de errores u overflow.
+
+Las inclusiones de Ponche Crema, ebook, ingredientes, materiales y utensilios y el plazo y la forma de pago del saldo de noviembre han sido confirmados expresamente y ya no son datos comerciales pendientes. No publicar cantidades de disponibilidad sin datos fiables ni prometer entrega de ebook en una fecha no aprobada. Estos cambios permanecen locales, sin commit, push, merge ni despliegue.
